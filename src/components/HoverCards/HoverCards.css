@@ -1,0 +1,138 @@
+.home_card-hover {
+    position: absolute;
+    top: 20%;
+    left: 90%;
+    transform: translateY(-50%);
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 16px;
+    width: 300px;
+    display: none;
+    z-index: 100;
+    margin-left: 12px;
+  }
+  
+  .home_card-wrapper:hover .home_card-hover {
+    display: block;
+  }
+  
+  .home_card-hover::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -8px;
+    transform: translateY(-50%);
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent white transparent transparent;
+  }
+  
+  /* Week Navigation */
+  .week-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  
+  .arrow-btn.plain {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 0 10px;
+    color: inherit;
+  }
+  
+  /* Optional: remove focus outline if needed */
+  .arrow-btn.plain:focus {
+    outline: none;
+  }
+
+  .week-label {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  /* Status Grid */
+  .status-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  
+  .status-box {
+    padding: 6px 8px;
+    border-radius: 6px;
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+  }
+  
+  .status-box.submitted {
+    background-color: #6f42c1;
+  }
+  .status-box.saved {
+    background-color: #007bff;
+  }
+  .status-box.approved {
+    background-color: #28a745;
+  }
+  .status-box.rejected {
+    background-color: #dc3545;
+  }
+  
+  /* Week Hours */
+  .week-hours {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+  .week-hours.filled div {
+    background-color: #e0f0ff;
+    padding: 2px 4px;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  /* Total Row and Buttons */
+  .total-row {
+    margin-top: 8px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  
+  .submit-btn,
+  .goto-btn {
+    margin-top: 6px;
+    width: 100%;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .submit-btn {
+    background-color: #28a745;
+    color: white;
+  }
+  .submit-btn:hover {
+    background-color: #218838;
+  }
+  
+  .goto-btn {
+    background-color: #005eb8;
+    color: white;
+  }
+  .goto-btn:hover {
+    background-color: #004a94;
+  }
+  
+
+  

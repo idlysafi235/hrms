@@ -1,0 +1,164 @@
+
+  .pay-home-container h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  
+  .pay-home-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+  
+  .pay-home-card {
+    background: #fff;
+    padding: 18px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .pay-home-card h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .payslip-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 10px;
+  }
+  
+  .payslip-list li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    font-size: 14px;
+  }
+  
+  button {
+    margin-top: 10px;
+    background-color: #0052cc;
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  button:hover {
+    background-color: #003d99;
+  }
+
+  .paymodal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .paymodal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 150%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  
+  
+  .dashboard-container {
+    padding: 20px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .dashboard-card {
+    background: #f9fafe;
+    border: 1px solid #e0e6f0;
+    padding: 16px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+  
+  .dashboard-card h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .dashboard-card p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .dashboard-section {
+    margin-top: 40px;
+  }
+  
+  .payslip-section {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+  
+  .payslip-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .payslip-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .payslip-item button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .payslip-item button:hover {
+    background-color: #0056b3;
+  }
+  
+  .view-more-toggle {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #007bff;
+    cursor: pointer;
+    text-align: right;
+  }
+  
+  .error-message {
+    color: red;
+    text-align: center;
+  }
+  

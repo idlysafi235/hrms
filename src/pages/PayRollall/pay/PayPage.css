@@ -1,0 +1,186 @@
+.pay-page {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .pay-sub-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+  }
+  .pay-page h2{
+    padding: 5px;
+  }
+  
+  .pay-sub-header .left h3 {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .pay-sub-header .right {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .pay-sub-header select {
+    margin-left: 10px;
+    padding: 4px 8px;
+    font-size: 14px;
+  }
+  
+  /* Month buttons */
+  .month-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+  
+  .month-btn {
+    padding: 6px 12px;
+    border: 1px solid #007BFF;
+    background-color: white;
+    color: #007BFF;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .month-btn:hover {
+    background-color: #007BFF;
+    color: white;
+  }
+
+  .month-btn.selected {
+    background-color: #007BFF;
+    color: white;
+    font-weight: 600;
+  }
+  
+  
+  /* Payslip content */
+  .slip-box {
+    border: 1px solid #ccc;
+    padding: 25px 30px;
+    border-radius: 6px;
+    background-color: #fafafa;
+  }
+  
+  .slip-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .company-info h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .company-info p {
+    margin: 2px 0;
+    font-size: 13px;
+  }
+  
+  .company-logo {
+    height: 60px;
+  }
+  
+  .slip-title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  
+  .employee-info p {
+    margin: 3px 0;
+    font-size: 14px;
+  }
+  
+  .pay-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  .pay-table th, .pay-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .pay-table th {
+    background-color: #f0f0f0;
+  }
+  
+  .highlight {
+    background-color: #eaf6ff;
+    font-weight: 600;
+  }
+  
+  .footer-note {
+    margin-top: 25px;
+    font-style: italic;
+    font-size: 13px;
+    color: #666;
+  }
+  
+  /* Print styling */
+  @media print {
+    body * {
+      visibility: hidden;
+    }
+  
+    .slip-box, .slip-box * {
+      visibility: visible;
+    }
+  
+    .slip-box {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      background: white;
+      padding: 40px;
+      border: none;
+    }
+  
+    .no-print {
+      display: none !important;
+    }
+  }
+
+
+  .employee-info-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .info-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+  
+  .info-row div {
+    width: 48%;
+  }
+  
+.pay-table td:nth-child(2),
+.pay-table td:nth-child(4),
+.pay-table th:nth-child(2),
+.pay-table th:nth-child(4),
+.text-right {
+  text-align: right;
+}
+
+  

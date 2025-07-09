@@ -1,0 +1,93 @@
+.helpdesk-page {
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.helpdesk-page h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.section {
+  margin-top: 2rem;
+}
+
+.tickets-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tickets-table th,
+.tickets-table td {
+  padding: 12px 16px;
+  border: 1px solid #e0e0e0;
+  text-align: left;
+}
+
+.tickets-table th {
+  background-color: #f9f9f9;
+  color: #555;
+}
+
+.tickets-table tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: #fff;
+}
+
+.status-badge.resolved {
+  background-color: #4caf50;
+}
+
+.status-badge.in-progress {
+  background-color: #ff9800;
+}
+
+.status-badge.open {
+  background-color: #2196f3;
+}
+
+.faq-list {
+  list-style: none;
+  padding: 0;
+}
+
+.faq-list li {
+  margin-bottom: 1rem;
+  background: #f5f5f5;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.faq-list li strong {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.document-list {
+  list-style: none;
+  padding: 0;
+}
+
+.document-list li {
+  margin-bottom: 0.75rem;
+}
+
+.document-list a {
+  text-decoration: none;
+  color: #1976d2;
+  font-weight: 500;
+}
+
+.document-list a:hover {
+  text-decoration: underline;
+}

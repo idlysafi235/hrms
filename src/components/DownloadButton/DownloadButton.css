@@ -1,0 +1,16 @@
+.download-button > button {
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    margin: 5px;
+
+    border: 1px solid #1e88e5;
+}
+
+.download-button > button:hover {
+    background: #427aa1;
+    border: 1px solid #427aa1;
+    color: white;
+}

@@ -1,0 +1,48 @@
+.hlist-cont {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.rsh {
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 6px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.table-container {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.scrollable-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.scrollable-table th,
+.scrollable-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.scrollable-table thead th {
+  background-color: #e0e0e0;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.scrollable-table tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.scrollable-table tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}

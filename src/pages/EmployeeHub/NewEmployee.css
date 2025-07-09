@@ -1,0 +1,55 @@
+
+
+.new-employee__page {
+  padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  margin-left: 2%;
+  margin-top: -2%;
+}
+
+.new-employee__form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: end;
+}
+
+.new-employee__form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-employee__form-group label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+
+.new-employee__form-group input,
+.new-employee__form-group select {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.new-employee__form-submit {
+  grid-column: span 3;
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.new-employee__form-submit button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.new-employee__form-submit button:hover {
+  background-color: #0056b3;
+}

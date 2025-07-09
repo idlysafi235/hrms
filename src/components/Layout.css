@@ -1,0 +1,6 @@
+.layout-container {
+  min-height: 100vh;
+  position: relative;
+  background-color: #ECE9FF;
+  overflow-x: hidden;
+}

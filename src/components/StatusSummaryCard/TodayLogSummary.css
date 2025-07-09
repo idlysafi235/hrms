@@ -1,0 +1,75 @@
+.log-summary {
+    padding: 0;
+    font-family: inherit;
+    color: inherit;
+  }
+  
+  .log-summary h4 {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #3b2f5c;
+    font-size: 1rem;
+  }
+  
+  .log-summary-list,
+  .todaytooltip-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .log-summary-item,
+  .todaytooltip-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+    padding: 4px 0;
+    border-bottom: 1px dashed #ccc;
+    gap: 15px;
+  }
+  
+  .label {
+    font-weight: 600;
+    color: #6e57a4;
+    font-size: 0.75rem;
+  }
+  
+  .value {
+    font-weight: 500;
+    color: #3b2f5c;
+    font-size: 0.75rem;
+  }
+  
+  .show-more {
+    margin-top: 8px;
+    color: #6e57a4;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 0.85rem;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .todaytooltip {
+    position: absolute;
+    left: 65px;
+    margin-top: 30%;
+    transform: translateY(-50%);
+    background-color: #93b5dc;
+    color: #ffffff;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 13px; 
+    white-space: nowrap;
+    display: none;
+    z-index: 2000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  .show-more:hover .todaytooltip {
+    display: block;
+  }
+  

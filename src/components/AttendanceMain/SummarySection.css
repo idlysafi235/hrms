@@ -1,0 +1,63 @@
+.summary-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .selected-date-summary h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.5rem;
+  }
+  
+  .log-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .log-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    font-size: 1rem;
+    color: #444;
+  }
+  
+  .log-list li strong {
+    font-weight: 600;
+    color: #007b83;
+    width: 100px;
+  }
+  
+  .error {
+    color: #c0392b;
+    font-weight: bold;
+  }
+  
+  .no-data {
+    font-style: italic;
+    color: #999;
+  }
+  
+  .holiday-list-section {
+    border-top: 2px solid #ddd;
+    padding-top: 1rem;
+  }
+  
+  .holiday-list-section h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    color: #444;
+  }
+  

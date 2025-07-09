@@ -1,0 +1,56 @@
+.finance-panel {
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .finance-panel h2 {
+    font-size: 22px;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+  }
+  
+  .finance-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .finance-table th, .finance-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    font-size: 14px;
+  }
+  
+  .finance-table th {
+    background-color: #f5f7fa;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .finance-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .loading-text {
+    font-size: 16px;
+    color: #777;
+    padding: 20px;
+  }
+  
+  .approve-btn {
+    padding: 6px 14px;
+    background-color: #067bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .approve-btn:hover {
+    background-color: #055fd0;
+  }
+  

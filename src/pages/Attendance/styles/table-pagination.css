@@ -1,0 +1,79 @@
+/* Team Overview Section */
+.team-overview {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  }
+  
+  /* Attendance Table */
+  .attendance-table {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+    margin-bottom: 2rem;
+  }
+  
+  .attendance-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    min-width: 700px;
+  }
+  
+  .attendance-table th,
+  .attendance-table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .attendance-table th {
+    background-color: #f0f2f5;
+    color: #444;
+    font-weight: 600;
+  }
+  
+  .attendance-table td {
+    color: #555;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .attendance-table td:hover {
+    background-color: #f7f9fc;
+  }
+  
+  /* Pagination Controls */
+  .pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+  }
+  
+  .pagination-controls button {
+    padding: 0.5rem 1rem;
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .pagination-controls button:disabled {
+    background-color: #c7d2fe;
+    cursor: not-allowed;
+  }
+  
+  .pagination-controls span {
+    font-size: 14px;
+    color: #333;
+  }
+  

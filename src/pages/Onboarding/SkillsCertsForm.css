@@ -1,0 +1,65 @@
+.form-section {
+    max-width: 700px;
+    margin: 30px auto;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  .form-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+  
+  .form-row {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-row label {
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .form-row input[type='text'],
+  .form-row input[type='file'] {
+    padding: 10px 12px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+  }
+  
+  .uploaded-documents ul {
+    margin: 0 0 10px 20px;
+    padding: 0;
+    list-style-type: disc;
+  }
+  
+  .form-button-container {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .next-button {
+    background-color: #007bff;
+    color: white;
+    padding: 14px 26px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .next-button:hover:not(:disabled) {
+    background-color: #0056b3;
+  }
+  
+  .next-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  

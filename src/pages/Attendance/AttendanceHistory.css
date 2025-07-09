@@ -1,0 +1,387 @@
+/* Container */
+.attendance-history-container {
+  padding: 1.5rem 2rem;
+  min-height: calc(100vh - 70px);
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+}
+
+/* Alerts */
+.error-message, .loading-message {
+  color: #a10000;
+  border: 1px solid #a10000;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.anomaly-alert, .low-attendance-alert {
+  background-color: #fff4e5;
+  border: 1px solid #f39c12;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  color: #b45f06;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Filters and Controls container */
+.filters-and-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+
+/* KPIs Section */
+.attendance-kpi-cards,
+.additional-kpi-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Individual KPI Card */
+.kpi-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+  cursor: default;
+}
+.kpi-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
+.kpi-card h3 {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 0.3rem;
+}
+
+.kpi-card p {
+  font-size: 22px;
+  font-weight: 700;
+  color: #222;
+  margin: 0;
+}
+
+/* Charts container */
+.attendance-charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.chart-box {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  min-height: 340px; /* Enough height for charts */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.chart-title {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+/* Comparisons Section */
+.comparisons-container {
+  margin-bottom: 2rem;
+}
+
+.comparison-chart {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Export & Print Buttons */
+.export-print-controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: flex-end;
+}
+
+.export-print-controls button {
+  background-color: #4f46e5;
+  border: none;
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.export-print-controls button:hover {
+  background-color: #3730a3;
+}
+
+/* Team Overview Section */
+.team-overview {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+/* Attendance Table */
+.attendance-table {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  margin-bottom: 2rem;
+}
+
+.attendance-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  min-width: 700px;
+}
+
+.attendance-table th,
+.attendance-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.attendance-table th {
+  background-color: #f0f2f5;
+  color: #444;
+  font-weight: 600;
+}
+
+.attendance-table td {
+  color: #555;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.attendance-table td:hover {
+  background-color: #f7f9fc;
+}
+
+/* Pagination Controls */
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.pagination-controls button {
+  padding: 0.5rem 1rem;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-controls button:disabled {
+  background-color: #c7d2fe;
+  cursor: not-allowed;
+}
+
+.pagination-controls span {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Employee Profile Modal */
+.employee-profile-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.employee-profile-modal {
+  background: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  position: relative;
+}
+
+.employee-profile-modal .close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: #444;
+}
+
+.employee-profile-modal h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #1361d6;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .attendance-history-container {
+    padding: 1rem 1.5rem;
+  }
+  .attendance-charts {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .attendance-history-container {
+    margin-left: 0;
+    margin-top: 60px;
+    padding: 1rem;
+  }
+
+  .attendance-charts {
+    grid-template-columns: 1fr;
+  }
+
+  .attendance-kpi-cards,
+  .additional-kpi-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .filters-and-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .export-print-controls {
+    justify-content: center;
+  }
+}
+
+/* KPI Container to layout multiple KPI cards in a responsive grid */
+.kpi-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 2rem 0;
+}
+
+/* Generic single KPI card style */
+.kpi-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.kpi-card:hover {
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.kpi-card h4 {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.kpi-card .kpi-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1361d6;
+  margin: 0;
+}
+
+.kpi-card .kpi-description {
+  font-size: 12px;
+  color: #999;
+  margin-top: 0.25rem;
+}
+
+/* Comparative Insights container */
+.comparative-insights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2rem 0;
+  justify-content: space-between;
+}
+
+/* Each comparison card/section */
+.comparison-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 1.5rem 1.75rem;
+  flex: 1 1 300px;
+  min-width: 280px;
+  max-width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.comparison-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1361d6;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.comparison-card .chart-placeholder {
+  /* Example placeholder for charts inside comparison cards */
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #999;
+  font-style: italic;
+  border: 2px dashed #ddd;
+  border-radius: 12px;
+  padding: 1rem;
+}
+

@@ -1,0 +1,52 @@
+.team-overview {
+    margin: 1.5rem 0;
+    padding: 1rem 1.25rem;
+    background-color: #f9fbff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  }
+  
+  .team-overview-heading {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .team-overview-table-wrapper {
+    overflow-x: auto;
+  }
+  
+  .team-overview-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+  }
+  
+  .team-overview-table th,
+  .team-overview-table td {
+    padding: 0.75rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .team-overview-table th {
+    background-color: #e0ecff;
+    font-weight: 600;
+    color: #1e40af;
+  }
+  
+  .team-overview-table tr:hover {
+    background-color: #f0f4ff;
+  }
+  
+  .team-name-button {
+    background: none;
+    border: none;
+    color: #2563eb;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  

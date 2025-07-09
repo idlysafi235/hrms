@@ -1,0 +1,214 @@
+/* Employee Profile Section */
+.employee-profile {
+  /* padding: 1rem 0; */
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  box-shadow: none;
+  
+}
+
+.profile-header {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  /* margin-bottom: 1rem; */
+}
+
+.profile-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-info h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  color: #333;
+}
+
+.name-and-upload {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.employee-name {
+  margin: 0;
+  font-size: 22px;
+  color: #333;
+}
+
+.upload-btns {
+  background-color: #2563eb;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+}
+
+.upload-btns:hover {
+  background-color: #2563eb;
+}
+
+.edit-btn {
+  background-color: rgb(236, 134, 70);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+}
+
+.edit-btn:hover {
+  background-color: #ec971f;
+}
+
+
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  border-radius: 8px;
+}
+
+.info-grid div {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-grid label {
+  font-size: 14px;
+  color: #000;
+  font-weight: 600;
+  /* color: #555; */
+}
+
+.info-grid input {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+  background-color: #fff;
+}
+
+.info-grid input[readonly] {
+  background-color: #f8fafc;
+  color: #D1D5DB;
+  cursor: not-allowed;
+}
+
+.info-grid input:focus {
+  border-color: #4CAF50;
+}
+
+/* Save Button */
+.save-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.save-btn-2 {
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  background-color: #2563eb;
+  color: white;
+  /* font-size: 16px; */
+  /* font-weight: bold; */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-btn-2:hover {
+  background-color: #2563eb;
+}
+
+.save-btn-2:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.save-btn {
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  background-color: #45a049;
+}
+
+.save-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.error-msg {
+  color: red;
+  text-align: center;
+}
+
+.error-border {
+  border: 1px solid red;
+  background-color: #fff0f0;
+}
+
+
+.styled-input {
+  margin-top: 3px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+  background-color: white;
+  box-sizing: border-box;
+  appearance: none; /* Remove default select arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+.styled-input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 3px #007bff;
+}
+
+.input-error {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+
+/* Optional: add a custom arrow for select */
+select.styled-input {
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%23333' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px 16px;
+  padding-right: 30px; /* space for arrow */
+}

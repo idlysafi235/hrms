@@ -1,0 +1,115 @@
+.pay-dashboard-container {
+    padding: 2rem;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9fafb;
+    color: #1f2937;
+  }
+  
+  .pay-dashboard-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+  
+  .pay-metrics {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+  
+  .pay-card {
+    flex: 1 1 200px;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  
+  .pay-card p {
+    color: #6b7280;
+    margin: 0;
+  }
+  
+  .pay-card h3 {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    color: #111827;
+  }
+  
+  .pay-section {
+    margin-top: 2rem;
+  }
+  
+  .pay-section h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .pay-table {
+    width: 100%;
+    background: white;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  .pay-table th, .pay-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+  }
+  
+  .pay-table th {
+    background-color: #f3f4f6;
+    font-weight: 600;
+    color: #374151;
+  }
+  
+  .pay-alerts {
+    padding-left: 1rem;
+    list-style: none;
+  }
+  
+  .pay-alerts li {
+    margin-bottom: 0.5rem;
+    color: #b91c1c;
+    font-weight: 500;
+  }
+  
+  .pay-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .pay-actions button {
+    padding: 0.75rem 1.25rem;
+    border: none;
+    background-color: #2563eb;
+    color: white;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .pay-actions button:hover {
+    background-color: #1d4ed8;
+  }
+  
+  .pay-filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .pay-filters label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  

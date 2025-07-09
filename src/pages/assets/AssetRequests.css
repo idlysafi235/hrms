@@ -1,0 +1,225 @@
+/* AssetRequests.css */
+
+.asset-requests-container {
+    width: 100%;
+    margin: 20px auto;
+    padding: 15px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+  }
+  
+  .asset-requests-container h2 {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #0056b3;
+  }
+  
+  .filters {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .filters input[type="text"],
+  .filters select {
+    padding: 8px 12px;
+    border: 1.5px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    min-width: 220px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .filters input[type="text"]:focus,
+  .filters select:focus {
+    outline: none;
+    border-color: #0056b3;
+  }
+  
+  .requests-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+  
+  .requests-table th,
+  .requests-table td {
+    border: 1px solid #ddd;
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: middle;
+  }
+  
+  .requests-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #333;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .requests-table tbody tr:hover {
+    background-color: #f1f7ff;
+  }
+  
+  .no-data {
+    text-align: center;
+    font-style: italic;
+    color: #777;
+    padding: 25px 0;
+  }
+  
+  .status-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    min-width: 80px;
+    text-align: center;
+  }
+  
+  .actions-cell button {
+    margin-right: 8px;
+    padding: 5px 14px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: white;
+  }
+  
+  .btn-approve {
+    background-color: #28a745;
+  }
+  
+  .btn-approve:hover {
+    background-color: #218838;
+  }
+  
+  .btn-reject {
+    background-color: #dc3545;
+  }
+  
+  .btn-reject:hover {
+    background-color: #c82333;
+  }
+  
+  .actions-cell em {
+    color: #999;
+    font-style: italic;
+    font-size: 0.9rem;
+  }
+  
+  .pagination {
+    margin-top: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .pagination button {
+    padding: 6px 14px;
+    font-size: 0.9rem;
+    border: 1.5px solid #0056b3;
+    background: #0056b3;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+  }
+  
+  .pagination button:disabled {
+    background: #c8c8c8;
+    border-color: #999;
+    cursor: not-allowed;
+  }
+  
+  .pagination button:not(:disabled):hover {
+    background-color: #004080;
+  }
+  
+  .pagination span {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #0056b3;
+  }
+  
+  /* Responsive */
+  @media (max-width: 900px) {
+    .filters {
+      flex-direction: column;
+    }
+    .filters input[type="text"],
+    .filters select {
+      min-width: 100%;
+    }
+  
+    .requests-table th,
+    .requests-table td {
+      padding: 8px 6px;
+      font-size: 0.85rem;
+    }
+  
+    .actions-cell button {
+      padding: 5px 10px;
+      font-size: 0.8rem;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .requests-table,
+    .requests-table thead,
+    .requests-table tbody,
+    .requests-table th,
+    .requests-table td,
+    .requests-table tr {
+      display: block;
+    }
+  
+    .requests-table thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+  
+    .requests-table tr {
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 12px;
+    }
+  
+    .requests-table td {
+      border: none;
+      padding-left: 50%;
+      position: relative;
+    }
+  
+    .requests-table td:before {
+      position: absolute;
+      top: 12px;
+      left: 15px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+      font-weight: 700;
+      color: #0056b3;
+      content: attr(data-label);
+    }
+  
+    .actions-cell button {
+      display: inline-block;
+      margin-bottom: 6px;
+    }
+  }
+  

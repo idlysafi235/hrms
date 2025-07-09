@@ -1,0 +1,204 @@
+.td-wrapper {
+    max-width: 1000px;
+    padding: 1rem;
+    font-family: 'Segoe UI', sans-serif;
+    border-radius: 8px;
+  }
+  
+  .td-header {
+    font-size: 1.8rem;
+    color: #2a2a2a;
+    text-align: center;
+  }
+  
+  .td-form {
+    
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  }
+  
+  .td-section {
+    margin-bottom: 1.5rem;
+  }
+  
+  .td-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  
+  .td-input-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .td-input-group label {
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+  }
+  
+  .td-input-group input,
+  .td-input-group select {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .td-error {
+    color: red;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .td-submit-container {
+    text-align: right;
+  }
+  
+  .td-btn {
+    background-color: #0078d4;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .td-btn:disabled {
+    background-color: #a6a6a6;
+    cursor: not-allowed;
+  }
+  
+  .td-table-section {
+    margin-top: 2rem;
+  }
+  
+  .td-table-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .td-no-data {
+    text-align: center;
+    color: #666;
+  }
+  
+  .td-table-scroll {
+    overflow-x: auto;
+  }
+  
+  .td-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  
+  .td-table th,
+  .td-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .td-actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .td-icon {
+    cursor: pointer;
+  }
+  
+  .td-edit {
+    color: #0078d4;
+  }
+  
+  .td-delete {
+    color: #e63946;
+  }
+  
+
+  .td-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .td-modal-content {
+    background: white;
+    padding: 2rem;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+  }
+  
+  .td-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .td-close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .full-width {
+    grid-column: span 2;
+  }
+  
+  .td-btn-secondary {
+    background-color: #f0f0f0;
+    color: #333;
+    margin-left: 1rem;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .td-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .td-submit-container {
+      text-align: center;
+    }
+  
+    .td-btn {
+      width: 100%;
+    }
+  }
+  
+  .td-select-regime {
+    margin: 20px 0;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+  
+  .td-select-regime select {
+    padding: 8px;
+    font-size: 14px;
+  }
+  
+  .td-button.save {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+  }
+  

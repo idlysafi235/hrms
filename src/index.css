@@ -1,0 +1,606 @@
+/* Reset default browser styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --header-height: 65px;
+  --sidenav-width: 200px;
+}
+
+* {
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Make forms look clean */
+input,
+button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-page {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0a449a;
+  overflow: hidden;
+}
+
+.login-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../asset/logo.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 300px;
+  opacity: 0.1;
+  /* <-- faint background */
+  z-index: 0;
+}
+
+.login-box {
+  position: relative;
+  z-index: 1;
+  /* <-- put the box above the background image */
+  width: 400px;
+  padding: 40px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+
+.title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-form label {
+  font-weight: 600;
+}
+
+.login-form input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.login-form button {
+  padding: 10px;
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #1a252f;
+}
+
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #555;
+}
+
+/* Custom Font classes */
+
+/* Margins */
+.mrg-tp {
+  margin-top: 10px;
+}
+
+/*  */
+
+/*For Headings we use sans and for content inside html we can use Open sans*/
+.rpr {
+  font-family: "Roboto", sans-serif;
+  /*For table Headings,options etc..*/
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* for home content heading*/
+.rsh {
+  /*For Main headings in Page*/
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.5em;
+}
+
+.osns {
+  /*For Content in Page*/
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+/* for grey subtext color */
+.color-grey {
+  color: #868e96;
+}
+
+/* Status Colors */
+.sts-a {
+  color: green
+}
+
+.sts-p {
+  color: orange
+}
+
+.sts-r {
+  color: red
+}
+
+/* -------------- */
+
+/*title center*/
+.t-cent {
+  text-align: center;
+  padding: 0.3em;
+}
+
+/* All Button Classes */
+.smbfn {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-size: 1.5em;
+  padding: 0.5em;
+  border: 1px solid black;
+  text-align: center;
+  max-width: 300px;
+}
+
+/* Button Classes end */
+.card-p {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+  /* subtle border */
+}
+
+.present-day {
+  background-color: #22c55e;
+  /* green-500 */
+  border-radius: 0.5rem;
+  color: white;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.absent-day {
+  background-color: #ef4444;
+  /* red-500 */
+  border-radius: 0.5rem;
+  color: white;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.react-calendar {
+  overflow: visible !important;
+  width: 100% !important;
+}
+
+.react-calendar__viewContainer {
+  overflow: visible !important;
+}
+
+.react-calendar__month-view__days {
+  overflow: visible !important;
+}
+
+.react-calendar__tile {
+  position: relative;
+  overflow: visible !important;
+}
+
+/* .employee-profile {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: 65px 0 0 200px;
+} */
+
+/* Nav bar */
+
+.navbar {
+  display: flex;
+  gap: 20px;
+  background-color: #f8f9fa;
+  padding: 15px 20px;
+  border-bottom: 1px solid #ddd;
+  /* margin-bottom: 20px; */
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.nav-link:hover {
+  background-color: #e2e6ea;
+}
+
+.nav-link.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.page-layout-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: var(--header-height) 1em;
+  margin-left: var(--sidenav-width);
+  gap: 1em
+}
+
+.outlet-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  overflow: auto;
+  scrollbar-width: thin;
+  /* Firefox */
+  scrollbar-color: #ccc #f1f1f1;
+  /* Firefox */
+}
+
+.outlet-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.outlet-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.outlet-container::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+
+.navbar {
+  display: flex;
+  gap: 10px;
+  padding: 10px 10px 0px 10px;
+  /* border-bottom: 2px solid #ddd; */
+  width: auto;
+  align-items: flex-start;
+  flex-direction: row;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px -1px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+
+.navbar-tab {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  width: 185px;
+  height: 38px;
+  font-size: 14px;
+  color: #21093d93;
+}
+
+.navbar-tab:hover {
+  /* background-color: #ffe6cc; */
+  /* color: #d9691e; */
+  color: #21093d;
+  border-bottom: 2px solid #21093d;
+}
+
+.navbar-tab.active {
+  color: #21093d;
+  border-bottom: 2px solid #21093d;
+  font-weight: 500;
+}
+
+.controls {
+  display: flex;
+  justify-content: start;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 16px;
+}
+
+.search-input,
+.filter-select {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  flex: 1 1 250px;
+  max-width: 360px;
+}
+
+.search-input:focus,
+.filter-select:focus {
+  border: 2px solid hsl(221, 100%, 82%);
+  outline: none;
+}
+
+.input-group {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+}
+
+.input-group input {
+  width: 100%;
+}
+
+.input-group .icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  border-bottom: 1px solid #dedede;
+  padding: 10px 14px;
+  text-align: left;
+  vertical-align: middle;
+  text-wrap: nowrap;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.table th {
+  background-color: #F8FAFC;
+  color: #6B7280;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.table td {
+  color: #21093D;
+  font-size: 12px;
+  font-weight: 500;
+  height: 60px;
+}
+
+.progress-bar-container {
+  background-color: #e0e0e0;
+  border-radius: 12px;
+  height: 8px;
+  width: 100px;
+  margin-right: 8px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.progress-bar {
+  height: 8px;
+  background-color: #3f51b5;
+  border-radius: 12px;
+  transition: width 0.5s ease;
+}
+
+.progress-percent {
+  vertical-align: middle;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.status {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: bold;
+  color: white;
+  display: inline-block;
+  text-transform: capitalize;
+}
+
+.details-btn {
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  color: #2563EB;
+  background: transparent;
+}
+
+.details-btn:hover {
+  color: #303f9f;
+  background: transparent;
+}
+
+.details-row td {
+  background-color: #f9f9f9;
+  padding: 15px;
+}
+
+.milestone-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.milestone-item {
+  background-color: #e8eaf6;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  flex: 1 1 200px;
+  max-width: fit-content;
+}
+
+/* Milestone statuses */
+.milestone-item.completed {
+  background-color: #16A34A11;
+  color: #16A34A;
+}
+
+.milestone-item.in-progress {
+  background-color: #2563EB11;
+  color: #2563EB;
+}
+
+.milestone-item.pending {
+  background-color: #f4433611;
+  color: #f44336;
+}
+
+.milestone-item.failed {
+  background-color: #f4433611;
+  color: #f44336;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+  }
+
+  .search-input,
+  .filter-select {
+    flex: 1 1 100%;
+  }
+
+  .milestone-list {
+    flex-direction: column;
+  }
+
+  .milestone-item {
+    flex: 1 1 100%;
+  }
+}
+
+.status-pending span,
+.status-resolved span,
+.status-approved span,
+.status-rejected span {
+  font-size: 12px;
+  border: 1px solid #ccc;
+  padding: 4px 12px;
+  border-radius: 16px;
+}
+
+.status-in-progess span {
+  color: #EAB308;
+  background-color: #EAB30805;
+  border: 1px solid #EAB308;
+}
+
+.status-pending span {
+  color: #d97706;
+  background-color: #d9770605;
+  border: 1px solid #d97706;
+}
+
+
+.status-resolved span,
+.status-approved span {
+  color: #22C55E;
+  background-color: #22C55E05;
+  border: 1px solid #22C55E;
+}
+
+.status-rejected span {
+  color: #EF4444;
+  background-color: #EF444405;
+  border: 1px solid #EF4444;
+}
+
+.table .actions {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+}

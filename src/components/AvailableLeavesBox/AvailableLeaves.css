@@ -1,0 +1,51 @@
+.avl-leaves_content-wrapper > h2 {
+    font-size:1.3em;
+    font-weight: 700;
+    text-align: center;
+}
+
+.avl-leaves_content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap:10px;
+    height: 100%;
+}
+
+.avl-leaves_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+.avl-leaves_earned, .avl-leaves_sick {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width:50%;
+}
+
+.avl-leaves_earned {
+    background: #d8f3dc;
+}
+
+.avl-leaves_sick {
+    background: #ffa5ab;
+}
+
+.avl-leaves_earned h5, .avl-leaves_sick h5 {
+    font-size: 3.5em;
+    margin: 0;
+}
+
+.avl-leaves_days {
+    font-size: 13px;
+}

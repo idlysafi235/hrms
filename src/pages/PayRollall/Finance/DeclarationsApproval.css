@@ -1,0 +1,63 @@
+.declarations-container {
+    max-width: 1200px;
+  }
+  
+ 
+  
+  button {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  
+  .message {
+    margin: 1rem 0;
+    padding: 0.75rem;
+    border-radius: 4px;
+  }
+  
+  .message.success {
+    background: #e6f7e6;
+    color: #2e7d32;
+  }
+  
+  .message.error {
+    background: #fdecea;
+    color: #c62828;
+  }
+  
+  .declarationmodal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .declarationmodal {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 6px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .declarationmodal-header {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1rem;
+  }
+  
+  .declarationmodal-footer {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+  
+  .declarationmodal-content p {
+    margin: 0.5rem 0;
+  }
+  

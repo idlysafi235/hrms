@@ -1,0 +1,51 @@
+.admin-container {
+    padding: 24px;
+  }
+  
+  .admin-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    padding: 20px;
+    margin-top: 16px;
+  }
+  
+  .admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+  }
+  
+  .admin-table th,
+  .admin-table td {
+    text-align: left;
+    padding: 12px 14px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  
+  .admin-table th {
+    background-color: #f3f3f3;
+    font-weight: 600;
+  }
+  
+  .admin-policy-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .admin-policy-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .status.success {
+    color: green;
+    font-weight: 600;
+  }
+  
+  .status.warning {
+    color: orange;
+    font-weight: 600;
+  }
+  

@@ -1,0 +1,64 @@
+.attendance-topbar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    align-items: start;
+  }
+  
+  .date-filter-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .date-filter-box label {
+    font-size: 13px;
+    color: #555;
+  }
+  
+  .date-filter-box input,
+  .date-filter-box select {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 100%;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .rows-per-page {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 160px;
+  }
+  
+  .rows-per-page label {
+    font-size: 13px;
+    color: #555;
+  }
+  
+  .rows-per-page select {
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    .attendance-topbar {
+      grid-template-columns: 1fr;
+    }
+  }
+  

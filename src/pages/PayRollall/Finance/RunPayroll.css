@@ -1,0 +1,130 @@
+/* Container styling */
+.run-payroll-container {
+    padding: 24px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  /* Header */
+  .run-payroll-container h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  
+  /* Form section */
+  .run-payroll-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+  
+  .run-payroll-form input,
+  .run-payroll-form select,
+  .run-payroll-form button {
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  
+  .run-payroll-form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .run-payroll-form button:hover {
+    background-color: #0056b3;
+  }
+
+  
+  /* Message box */
+  .message {
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+  }
+  
+  .message.success {
+    background-color: #e6ffed;
+    color: #256029;
+    border: 1px solid #b5e1b9;
+  }
+  
+  .message.error {
+    background-color: #ffe6e6;
+    color: #a10000;
+    border: 1px solid #f1a1a1;
+  }
+  
+  .kpi-summary {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  
+  .kpi-card {
+    background: #f9f9f9;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    flex: 1;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  
+  .kpi-card h4 {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .kpi-card p {
+    margin: 5px 0 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .message-box {
+    margin: 1rem 0;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+  }
+  
+  .message-box.success {
+    background-color: #e7fbe7;
+    border-color: #5cb85c;
+  }
+  
+  .message-box.error {
+    background-color: #fdecea;
+    border-color: #d9534f;
+  }
+  
+  .message-box.warning {
+    background-color: #fff8e1;
+    border-color: #f0ad4e;
+  }
+  
+  .message-header {
+    padding: 0.75rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .message-body {
+    padding: 0.75rem 1rem;
+    background-color: #fff;
+  }
+  
+  .toggle-arrow {
+    font-weight: normal;
+    font-size: 14px;
+  }
+  

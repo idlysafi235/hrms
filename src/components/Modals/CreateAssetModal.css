@@ -1,0 +1,132 @@
+/* Modal overlay covers entire viewport */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Modal container */
+  .modal-content {
+    background: white;
+    padding: 32px;
+    border-radius: 12px;
+    width: 900px;
+    max-width: 95vw;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Modal title */
+  .modal-content h3 {
+    text-align: center;
+    margin-bottom: 32px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  /* Form uses grid layout with 2 columns */
+  .modal-content form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  /* Each label stacks text and input vertically */
+  .modal-content form label {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  /* Inputs and selects share styling */
+  .modal-content input,
+  .modal-content select {
+    margin-top: 6px;
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #f9f9f9;
+    width: 100%;
+    box-sizing: border-box;
+    min-width: 150px; /* Prevent inputs from shrinking too small */
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+  }
+  
+  /* Focus style for inputs and selects */
+  .modal-content input:focus,
+  .modal-content select:focus {
+    outline: none;
+    border-color: #007bff;
+    background-color: #fff;
+  }
+  
+  /* Buttons container spans full form width and aligns right */
+  .modal-actions {
+    grid-column: span 2;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 32px;
+  }
+  
+  /* Buttons styling */
+  .modal-actions button {
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  /* Cancel button style */
+  .modal-actions button[type="button"] {
+    background-color: #6c757d;
+  }
+  
+  /* Hover states */
+  .modal-actions button:hover {
+    background-color: #0056b3;
+  }
+  
+  .modal-actions button[type="button"]:hover {
+    background-color: #5a6268;
+  }
+  
+  /* Responsive: On medium screens, switch to 2 columns but narrower */
+  @media (max-width: 1024px) {
+    .modal-content {
+      width: 95vw;
+    }
+    .modal-content form {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Responsive: On small screens, 1 column and stacked buttons */
+  @media (max-width: 600px) {
+    .modal-content form {
+      grid-template-columns: 1fr;
+    }
+    .modal-actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .modal-actions button {
+      width: 100%;
+    }
+  }
+  

@@ -1,0 +1,59 @@
+.form-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .experience-block {
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .experience-block label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  
+  .experience-block input,
+  .experience-block textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .experience-block textarea {
+    resize: vertical;
+  }
+  
+  .button {
+    padding: 10px 16px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  .add-button {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .remove-button {
+    background-color: #dc3545;
+    color: white;
+    margin-top: 8px;
+  }
+  
+  .submit-button {
+    background-color: #28a745;
+    color: white;
+  }
+  

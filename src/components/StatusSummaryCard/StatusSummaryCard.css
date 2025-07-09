@@ -1,0 +1,240 @@
+.summary_card {
+  width: 100%;
+  height: stretch;
+  min-width: 300px;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  /* background: linear-gradient(125.41deg, #21093D -2.21%, #5818A3 101.21%); */
+  color: #21093D;
+}
+
+.statussummary_wrapper {
+  height: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #e0e0e0;
+  /* color: #d4d2d6; */
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(125.41deg, #21093D -2.21%, #5818A3 101.21%);
+  border-top: 4px solid #0ab031;
+  /* height: 100%; */
+  box-sizing: border-box;
+  color: white;
+}
+
+.clockin-active {
+  background: linear-gradient(125.41deg, #21093D -2.21%, #5818A3 101.21%);
+  color: white;
+}
+
+.statussummary_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  gap: 12px;
+}
+
+.statussummary_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(255, 255, 255, 1);
+}
+.statussummary_title h2{
+  color: rgba(255, 255, 255, 1);
+}
+
+
+.statussummary_duration-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  font-family: Inter;
+  font-weight: 700;
+  /* font-size: 36px; */
+  /* line-height: 100%; */
+  /* letter-spacing: 0.5%; */
+  text-align: center;
+  /* margin: 10px 0px; */
+}
+
+.statussummary_duration-wrapper h4 {
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+.statussummary_location-absolute {
+  position: absolute;
+  top: 100%;
+  margin-top: 4px;
+  font-size: 0.85rem;
+  /* color: rgba(255, 255, 255, 1); */
+  font-style: italic;
+  animation: fadeInOut 7s ease-in-out;
+  white-space: nowrap;
+  text-align: center;
+  width: 100%;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Buttons layout */
+.statussummary_buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.statussummary_button {
+  padding: 8px 10px;
+  flex: 1 1 120px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  color: #21093D;
+  transition: all 0.3s ease, color 0.3s ease;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.statussummary_clockin-button {
+  background-color: #91ff5e;
+  border: 1px solid #21093D;
+}
+
+.statussummary_clockin-button:hover {
+  background-color: #60f61b !important;
+}
+
+.statussummary_clockout-button {
+  background-color: #ef4444;
+  color: white;
+}
+
+.statussummary_clockout-button:hover {
+  background-color: #cf0202 !important;
+}
+
+.statussummary_button.disabled {
+  background-color: #cccccc !important;
+  cursor: not-allowed;
+  color: #666666 !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .statussummary_wrapper {
+    flex-direction: column;
+  }
+
+  .statussummary_buttons {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .statussummary_button {
+    flex: 1;
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+}
+
+.statussummary_duration-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 70px;
+  /* margin-bottom: 16px; */
+}
+
+
+.statussummary_big-num {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0 4px;
+}
+
+.statussummary_location {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  font-style: italic;
+  white-space: nowrap;
+  animation: fadeInOut 7s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.weekly_summary {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow: hidden;
+  overflow-y: scroll;
+  height: 48px;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+}
+
+.weekly_summary::-webkit-scrollbar {
+  display: none;
+  /* Safari and Chrome */
+}
+
+.weekly_summary_details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 600;
+}

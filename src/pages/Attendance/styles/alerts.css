@@ -1,0 +1,23 @@
+/* Alerts */
+.error-message, .loading-message {
+ 
+    color: #a10000;
+    border: 1px solid #a10000;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .anomaly-alert, .low-attendance-alert {
+
+    border: 1px solid #f39c12;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    color: #b45f06;
+    font-weight: 600;
+    text-align: center;
+  }
+  

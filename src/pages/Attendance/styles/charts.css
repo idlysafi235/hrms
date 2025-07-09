@@ -1,0 +1,53 @@
+/* Charts container */
+.attendance-charts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .chart-box {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    min-height: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .chart-title {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 1rem;
+    color: #333;
+    text-align: center;
+  }
+/* Charts container */
+.attendance-charts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .chart-box {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    min-height: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .chart-title {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 1rem;
+    color: #333;
+    text-align: center;
+  }
+    

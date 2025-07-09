@@ -1,0 +1,133 @@
+.onboard-wrapper {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #e3e4e0;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.onboard-wrapper h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.onboard-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.row-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.form-field {
+  flex: 1;
+  min-width: 160px;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.form-field input {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.form-field input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.submit-btns {
+  padding-left: 30%;
+  width: 25%;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.submit-btn:hover {
+  background: #0056b3;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* Adjusted width for the entire container */
+  gap: 20px;
+
+}
+
+.card {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.onboarding-card {
+  width: 70%; /* 70% width for the form card */
+}
+
+.available-candidates-card {
+  width: 30%; /* 30% width for the candidates card */
+  height: 80%;
+  margin-top: 15%;
+}
+
+h2, h3 {
+  text-align: center;
+}
+
+.row-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-field {
+  margin: 10px 0;
+  flex: 1;
+}
+
+.submit-btns {
+  width: 100%;
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.submit-btns:hover {
+  background-color: #0056b3;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  padding: 5px 0;
+}

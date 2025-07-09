@@ -1,0 +1,120 @@
+:root {
+  --bg-light: #f9fafb;
+  --bg-medium: #f3f4f6;
+  --border-color: #e5e7eb;
+  --text-dark: #1f2937;
+  --text-muted: #6b7280;
+  --primary: #3b82f6;
+  --primary-dark: #1d4ed8;
+  --success: #10b981;
+  --success-dark: #059669;
+  --danger: #ef4444;
+  --danger-dark: #dc2626;
+  --warning: #d97706;
+  --overtime: #dc2626;
+  --underhours: #92400e;
+}
+
+.timesheet-table {
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+  overflow-x: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.timesheet-header {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 3fr 1fr 1.5fr 1fr 2fr;
+  background-color: var(--bg-medium);
+  padding: 14px 20px;
+  font-weight: 600;
+  color: var(--text-dark);
+  border-bottom: 1px solid var(--border-color);
+  font-size: 15px;
+}
+
+.timesheet-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 3fr 1fr 1.5fr 1fr 2fr;
+  padding: 14px 20px;
+  align-items: center;
+  font-size: 14px;
+  border-bottom: 1px solid var(--border-color);
+  transition: background 0.2s;
+}
+
+.timesheet-row:hover {
+  background-color: var(--bg-light);
+}
+
+.timesheet-cell {
+  padding: 4px 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--text-dark);
+}
+
+/* ==== Fullname & ID stacked === */
+.employee-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 13.5px;
+  color: var(--text-dark);
+}
+
+.employee-info .fullname {
+  font-weight: 500;
+}
+
+.employee-info .employee-id {
+  font-size: 12.5px;
+  color: var(--text-muted);
+}
+
+/* ==== Clickable ID (if needed separately) ==== */
+.clickable-id {
+  color: var(--primary);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.clickable-id:hover {
+  color: var(--primary-dark);
+}
+
+/* ==== Hours Color Highlights ==== */
+.overtime {
+  color: var(--overtime);
+  font-weight: 600;
+}
+.underhours {
+  color: var(--underhours);
+  font-weight: 600;
+}
+
+
+/* ==== Responsive ==== */
+@media (max-width: 1024px) {
+  .timesheet-header,
+  .timesheet-row {
+    grid-template-columns: 1.2fr 2fr 2fr 2.5fr 1fr 1.2fr 1fr 2fr;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .timesheet-header,
+  .timesheet-row {
+    display: block;
+  }
+
+  .timesheet-cell {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--bg-medium);
+  }
+
+}

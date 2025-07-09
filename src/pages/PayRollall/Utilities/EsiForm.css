@@ -1,0 +1,93 @@
+.esi-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px;
+    font-family: 'Segoe UI', sans-serif;
+    background: #fff;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+  }
+  
+  .esi-heading {
+    text-align: center;
+    color: #1e1e1e;
+    margin-bottom: 24px;
+  }
+  
+  .esi-subheading {
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 6px;
+    margin-top: 30px;
+    margin-bottom: 16px;
+  }
+  
+  .esi-required {
+    color: red;
+  }
+  
+
+  
+  /* Inline Form Fields */
+  .esi-form-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 14px;
+  }
+  
+  .esi-form-row .esi-label {
+    width: 220px;
+    font-weight: 500;
+    color: #333;
+    white-space: nowrap;
+  }
+  
+  .esi-form-row input {
+    width: 300px;
+    padding: 6px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Two-column layout */
+  .esi-grid-2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .esi-grid-2 .esi-form-row {
+    flex: 1 1 48%;
+  }
+  
+  .esi-checkbox-row {
+    margin: 14px 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .esi-save-btn {
+    margin-top: 32px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .esi-save-btn button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 26px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .esi-save-btn button:hover {
+    background-color: #0056b3;
+  }
+  

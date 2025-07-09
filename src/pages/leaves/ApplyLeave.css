@@ -1,0 +1,171 @@
+.leave-form {
+  max-width: 720px;
+  margin: 50px auto;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.leave-form h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #2c3e50;
+  font-size: 26px;
+}
+
+.leave-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.leave-form label {
+  margin-top: 16px;
+  margin-bottom: 4px;
+  font-weight: 600;
+  color: #34495e;
+  font-size: 15px;
+}
+
+.leave-form input,
+.leave-form select,
+.leave-form textarea {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccd1d9;
+  font-size: 15px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.leave-form input:focus,
+.leave-form select:focus,
+.leave-form textarea:focus {
+  border-color: #28a745;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.2);
+}
+
+.leave-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.leave-form .error-input {
+  border-color: #e74c3c;
+  background-color: #fceae9;
+}
+
+.error-text {
+  color: #e74c3c;
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+.leave-form button {
+  margin-top: 24px;
+  padding: 14px;
+  background-color: #28a745;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.leave-form button:hover {
+  background-color: #218838;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-box {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.modal-box h3 {
+  margin-bottom: 20px;
+  color: #28a745;
+}
+
+.confirm-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.confirm-stay {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.confirm-stay:hover {
+  background-color: #218838;
+}
+
+/* Section Card Style */
+.leave-section-card {
+  background-color: #f9f9f9;
+  border: 1px solid #e1e1e1;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.04);
+}
+
+.leave-balance {
+  margin-top: 10px;
+  color: #2e7d32;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.date-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.date-row input[type="date"],
+.date-row select {
+  flex: 1;
+  min-width: 0;
+}
+
+.leave-duration {
+  margin-top: 12px;
+  font-weight: 600;
+  color: #34495e;
+  font-size: 15px;
+}
+
+.form-errors-summary {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background-color: #ffecec;
+  border-left: 4px solid #ff4d4d;
+  color: #a94442;
+  border-radius: 4px;
+}

@@ -1,0 +1,75 @@
+.requesthr-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.requesthr-box {
+  width: 90%;
+  max-width: 500px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 22px 26px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+.requesthr-title {
+  margin-bottom: 20px;
+  font-size: 1.25rem;
+}
+
+.requesthr-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.requesthr-label {
+  margin-bottom: 14px;
+  font-weight: 500;
+}
+
+.requesthr-input,
+.requesthr-textarea,
+.requesthr-select {
+  width: 100%;
+  margin-top: 4px;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.requesthr-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.requesthr-submit-btn,
+.requesthr-cancel-btn {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.requesthr-submit-btn {
+  background: #007bff;
+  color: #fff;
+}
+
+.requesthr-cancel-btn {
+  background: #ccc;
+  color: #333;
+}
+
+.requesthr-error {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 10px;
+}

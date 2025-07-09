@@ -1,0 +1,368 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+}
+
+/* Container */
+/* .teams-container {
+  max-width: auto;
+  margin: auto;
+  padding: 0 1rem;
+} */
+
+/* Section list and layout */
+.team-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+
+}
+
+.team-section {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: none;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.team-section:hover {
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
+}
+
+.team-header {
+  width: 100%;
+  padding: 8px 16px;
+  background-color: #fff;
+  color: #21093d;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  transition: background-color 0.3s ease;
+  border: 1px solid #ededed;
+  /* border-bottom: 1px solid #2c3e50; */
+  margin-top: 0px;
+}
+
+.team-header:hover {
+  background-color: #eaeaea;
+}
+
+.team-header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+/* Toggle arrow */
+.arrow {
+  font-size: 1.2rem;
+  font-weight: bold;
+  user-select: none;
+  transition: transform 0.25s ease;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+/* Members container and table */
+.team-members-container {
+  padding: 16px;
+  background-color: #f9fcf9;
+  border-top: 1px solid #e0e7e3;
+  overflow-x: auto;
+}
+
+.members-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+
+.members-table thead tr {
+  background-color: #d9ead3;
+  color: #2f6627;
+  font-weight: 700;
+  font-size: 1rem;
+  user-select: none;
+}
+
+.members-table th,
+.members-table td {
+  padding: 14px 20px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8e5;
+  vertical-align: middle;
+  font-size: 0.95rem;
+  color: #34495e;
+}
+
+.light-table-head th {
+  background-color: #F8FAAC !important;
+}
+
+.members-table tbody tr:hover {
+  background-color: #e6f1df;
+  transition: background-color 0.2s ease;
+  cursor: default;
+}
+
+/* Member avatar and name */
+.member-row .avatar {
+  width: 36px;
+  height: 36px;
+  vertical-align: middle;
+  border-radius: 50%;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.member-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.members-actions-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+
+/* Add Member Button */
+.add-member-btn,
+.delete-team-btn {
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  border: none;
+}
+
+.add-member-btn {
+  background-color: #2563EB;
+  color: white;
+}
+
+.add-member-btn:hover {
+  background-color: #0046de;
+}
+
+.delete-team-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.delete-team-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Remove Button */
+.remove-btn {
+  background-color: #e74c3c;
+  color: white;
+  font-size: 0.8rem;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.remove-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Empty state & feedback */
+.no-members {
+  padding: 2rem 1rem;
+  font-style: italic;
+  color: #7f8c8d;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.loading,
+.error {
+  text-align: center;
+  margin-top: 3rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  user-select: none;
+}
+
+.error {
+  color: #c0392b;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .members-table {
+    min-width: 700px;
+  }
+}
+
+@media (max-width: 640px) {
+  .members-table {
+    min-width: 600px;
+  }
+
+  .team-header {
+    font-size: 0.9rem;
+    padding: 10px 14px;
+  }
+}
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(44, 62, 80, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Modal content box */
+.modal-content {
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #2c3e50;
+}
+
+.modal-buttons {
+  margin-top: 1.8rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.confirm-btn {
+  background-color: #c0392b;
+  border: none;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.confirm-btn:hover {
+  background-color: #922b21;
+}
+
+.cancel-btn {
+  background-color: #bdc3c7;
+  border: none;
+  color: #2c3e50;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background-color: #95a5a6;
+}
+
+.Ttop-bar {
+  display: flex;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 16px;
+
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.Tleft-group,
+.Tright-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.Tright-group {
+  margin-left: auto;
+}
+
+.Tinput-field,
+.Tsearch-field {
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  min-width: 200px;
+}
+
+.Tcreate-btn {
+  padding: 8px 12px;
+  background-color: #00a229;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 0px;
+}
+
+.Tcreate-btn:hover {
+  background-color: #00de38;
+}
+
+.Tcreate-btn:disabled {
+  opacity: 0.6;
+}
+
+.modal-input {
+  width: 100%;
+  padding: 10px;
+  margin: 12px 0;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #c62828;
+}

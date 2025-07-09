@@ -1,0 +1,295 @@
+:root {
+  --col-name: 1.5fr;
+  --col-week: 1.5fr;
+  --col-hours: 1.5fr;
+  --col-overtime: 1fr;
+  --col-status: 1.5fr;
+  --col-reason: 1fr;
+  --col-comments: 2fr;
+  --col-date: 1.5fr;
+  --col-actions: 1fr;
+}
+
+/* Dashboard Layout */
+.timesheet-dashboard {
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  background-color: transparent !important;
+}
+
+.time-management-table {
+  background-color: #ffffff;
+  /* padding: 20px; */
+  border-radius: 12px;
+  margin-top: 1%;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1f2937;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* KPI Section */
+.kpi-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.kpi-card {
+  padding: 1.25rem;
+  background: #ffffff;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  font-size: 1rem;
+  font-weight: 600;
+  transition: transform 0.2s ease-in-out;
+}
+
+.kpi-card:hover {
+  transform: translateY(-3px);
+}
+
+.kpi-card.approved {
+  color: #22c55e;
+}
+
+.kpi-card.pending {
+  color: #facc15;
+}
+
+.kpi-card.rejected {
+  color: #ef4444;
+}
+
+.kpi-card.hours {
+  color: #3b82f6;
+}
+
+/* Filters */
+.filters-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  justify-content: flex-start;
+}
+
+.search-input {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  padding: 0.3rem 0.5rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.search-input svg {
+  margin-right: 0.4rem;
+  color: #6b7280; /* gray-500 */
+  font-size: 1rem;
+}
+
+.search-input input {
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+/* Date inputs: smaller and aligned */
+.filters-section input[type="date"] {
+  padding: 0.3rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 0.9rem;
+  width: 130px;
+  flex-shrink: 0;
+}
+
+/* Selects: smaller width and consistent padding */
+.filters-section select {
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 0.9rem;
+  width: 140px;
+  flex-shrink: 0;
+}
+
+/* Export button: smaller and inline */
+.export-btn {
+  background: #2563eb;
+  color: white;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.export-btn:hover {
+  background: #1d4ed8;
+}
+
+/* Actions buttons styling for cleaner and modern look */
+.actions button {
+  padding: 0.4rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+  margin-right: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.actions button:last-child {
+  margin-right: 0;
+}
+
+.actions .approve {
+  background: #16a34a;
+  color: white;
+  box-shadow: 0 4px 8px rgba(22, 163, 74, 0.4);
+}
+
+.actions .approve:hover {
+  background: #15803d;
+  box-shadow: 0 6px 12px rgba(21, 128, 61, 0.6);
+}
+
+.actions .reject {
+  background: #dc2626;
+  color: white;
+  box-shadow: 0 4px 8px rgba(220, 38, 38, 0.4);
+}
+
+.actions .reject:hover {
+  background: #b91c1c;
+  box-shadow: 0 6px 12px rgba(185, 28, 28, 0.6);
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 1.5rem;
+  width: 90%;
+  max-width: 450px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.modal-content textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  margin-bottom: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  resize: vertical;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-cancel {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.btn-cancel:hover {
+  background: #d1d5db;
+}
+
+.btn-submit {
+  background: #dc2626;
+  color: white;
+}
+
+.btn-submit:hover {
+  background: #b91c1c;
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.85rem;
+  border-radius: 20px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.status-pending {
+  color: #d97706;
+  font-weight: 600;
+}
+
+.status-approved,
+.status-resolved {
+  color: #059669;
+  font-weight: 600;
+}
+
+.status-rejected {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.reject-reason {
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  color: #991b1b;
+  font-style: italic;
+  white-space: pre-wrap;
+}

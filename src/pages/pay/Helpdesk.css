@@ -1,0 +1,68 @@
+/* src/components/Pay/Helpdesk.css */
+
+.helpdesk-container {
+    max-width: 700px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .helpdesk-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .helpdesk-form input {
+    flex: 1;
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .helpdesk-form button {
+    padding: 8px 16px;
+    font-size: 1rem;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .helpdesk-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .faq-list,
+  .ticket-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .faq-list li,
+  .ticket-list li {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .faq-list strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #007bff;
+  }
+  
+  .loading-indicator {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .error-message {
+    color: #b00020;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+  

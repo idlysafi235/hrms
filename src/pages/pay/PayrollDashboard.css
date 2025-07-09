@@ -1,0 +1,76 @@
+.payroll-dashboard-container {
+    padding: 24px;
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    margin-left: 2%;
+  }
+  
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  
+  .dashboard-header h2 {
+    margin: 0;
+    font-size: 1.8rem;
+  }
+  
+  .dashboard-header button {
+    background-color: #0052cc;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .dashboard-header button:disabled {
+    background-color: #9bb1da;
+    cursor: not-allowed;
+  }
+  
+  .loading-indicator {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 40px;
+  }
+  
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  
+  .dashboard-card {
+    background: white;
+    border-left: 5px solid #007bff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+  }
+  
+  .dashboard-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .dashboard-card h4 {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: #444;
+  }
+  
+  .dashboard-card p {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .dashboard-card.warning {
+    border-left-color: #f39c12;
+  }
+
+  

@@ -1,0 +1,134 @@
+.asset-list-tab {
+  margin: 0;
+  padding: 16px 24px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: auto;
+  /* margin-top: -4%; */
+  /* margin-left: 2%; */
+}
+
+.asset-list-container {
+  width: 100%;
+}
+
+/* Table header layout */
+.asset-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Left side controls */
+.top-controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.top-controls input[type="text"],
+.top-controls select {
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+/* Right side button */
+.create-button-container {
+  flex-shrink: 0;
+}
+
+.create-asset-button {
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.create-asset-button:hover {
+  background-color: #45a049;
+}
+
+/* Table styles */
+.asset-list-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+.asset-list-table th,
+.asset-list-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+  font-weight: normal;
+}
+
+.asset-list-table th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+/* Status styling */
+.status {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.status.available {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status.assigned {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.status.repair {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status.retired {
+  background-color: #e2e3e5;
+  color: #6c757d;
+}
+
+.status.lost {
+  background-color: #f5c6cb;
+  color: #721c24;
+}
+
+/* Bulk actions styling */
+.bulk-actions {
+  margin-bottom: 12px;
+}
+
+.bulk-actions button {
+  margin-right: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+/* Pagination styling */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  cursor: pointer;
+}

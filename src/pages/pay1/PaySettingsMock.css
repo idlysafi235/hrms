@@ -1,0 +1,25 @@
+.pay-settings {
+    padding: 2rem;
+    max-width: 600px;
+   
+    font-family: Arial, sans-serif;
+  }
+  
+  .setting-group {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .setting-group label {
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+  }
+  
+  .setting-group input,
+  .setting-group select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  

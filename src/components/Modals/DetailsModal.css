@@ -1,0 +1,137 @@
+.details-modal__overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.details-modal__container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 720px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+.details-modal__header {
+  margin-bottom: 1.5rem;
+  color: #005eb8;
+  font-size: 1.75rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.details-modal__section {
+  margin-bottom: 1.5rem;
+}
+
+.details-modal__section-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 4px;
+}
+
+.details-modal__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.details-modal__grid label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.details-modal__grid span {
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: #555;
+}
+
+.details-modal__grid input,
+.details-modal__section textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.details-modal__section textarea {
+  resize: vertical;
+  min-height: 80px;
+  width: 100%;
+}
+
+.details-modal__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.details-modal__save-btn,
+.details-modal__cancel-btn {
+  border: none;
+  padding: 10px 18px;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.details-modal__save-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.details-modal__save-btn:hover {
+  background-color: #0056b3;
+}
+
+.details-modal__cancel-btn {
+  background: #f3f4f6;
+  color: #111;
+}
+
+.details-modal__grid select {
+  padding: 8px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: white;
+  color: #333;
+}
+
+.autocomplete-dropdown li:hover {
+  background-color: #f0f0f0;
+}
+
+.input-readonly {
+  background-color: #f9f9f9;
+  color: #555;
+  border: 1px solid #ccc;
+}
+
+.no-edit-cursor {
+  cursor: not-allowed !important;
+}
+
+.field-error {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+

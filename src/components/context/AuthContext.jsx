@@ -17,7 +17,9 @@ export const AuthProvider = ({ children }) => {
 
     let currentToken = urlToken || localStorage.getItem('token');
 
-    if (!currentToken || isTokenExpired(currentToken)) {
+    const currentPath = window.location.pathname;
+
+    if ((!currentToken || isTokenExpired(currentToken)) && currentPath !== '/login') {
       localStorage.clear();
       setToken(null);
       setUser(null);

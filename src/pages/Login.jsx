@@ -1,4 +1,3 @@
-
 // import React, { useEffect } from 'react';
 
 // const Login = () => {
@@ -10,10 +9,9 @@
 
 // export default Login;
 
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../index.css';
+// import '../output.css';
 import { loginUser } from '../api/services';
 import logo from '../asset/logo.svg';
 
@@ -44,7 +42,7 @@ function Login() {
           firstName: response.firstName,
           lastName: response.lastName,
           token: response.token,
-          onboardingStatus: response.onboardingStatus
+          onboardingStatus: response.onboardingStatus,
         };
 
         console.log('💾 Saving user data to localStorage...');
@@ -54,10 +52,7 @@ function Login() {
 
         console.log('✅ Login success. Onboarding status:', response.onboardingStatus);
 
-        if (
-          response.onboardingStatus === 'Pending' ||
-          response.onboardingStatus === 'InProgress'
-        ) {
+        if (response.onboardingStatus === 'Pending' || response.onboardingStatus === 'InProgress') {
           console.log('➡️ Navigating to /onboarding/personal-info');
           navigate('/onboarding/personal-info');
         } else {
@@ -77,22 +72,15 @@ function Login() {
   };
 
   return (
-    <div className="login-page">
+    <div className="login-page ">
       <div className="login-box">
         <h2 className="title">HRMS</h2>
         <div className="login-form">
           <label>Email</label>
-          <input
-            type="text"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
+
+          <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
           <label>Password</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
+          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
           <button onClick={handleLogin} disabled={loading}>
             {loading ? 'Logging in...' : 'Login'}
           </button>

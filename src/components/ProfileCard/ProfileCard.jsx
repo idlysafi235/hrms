@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 import './ProfileCard.css';
 import { fetchProfile } from '../../api/services';
-import { getToken} from '../../utils/auth'
+import { getToken } from '../../utils/auth';
 
 function ProfileCard({ user }) {
   const [profileData, setProfileData] = useState(user || null);
@@ -24,7 +24,7 @@ function ProfileCard({ user }) {
   useEffect(() => {
     const loadProfile = async () => {
       try {
-        const token = getToken(); 
+        const token = getToken();
         if (!token) throw new Error('User token not found');
 
         const profile = await fetchProfile(token);
@@ -43,27 +43,23 @@ function ProfileCard({ user }) {
   }, [user]);
 
   const handleClick = () => {
-    navigate("/profile/profile");
+    navigate('/profile/profile');
   };
 
   const displayData = profileData || defaultUser;
 
   const renderAvatar = () => {
     const hasImage = displayData.profileImageUrl && !imageError;
-  
+
     if (hasImage) {
       return (
-        <img
-          src={displayData.profileImageUrl}
-          alt="Profile"
-          onError={() => setImageError(true)}
-        />
+        <img src={displayData.profileImageUrl} alt="Profile" onError={() => setImageError(true)} />
       );
     }
-  
+
     const initials = (() => {
       if (!displayData?.fullName) return 'U';
-    
+
       const words = displayData.fullName.trim().split(/\s+/);
       if (words.length === 1) {
         return words[0][0].toUpperCase();
@@ -73,8 +69,7 @@ function ProfileCard({ user }) {
         return (words[0][0] + words[words.length - 1][0]).toUpperCase();
       }
     })();
-    
-  
+
     return (
       <div className="profile-image initials">
         <div className="icon-placeholder">
@@ -83,7 +78,6 @@ function ProfileCard({ user }) {
       </div>
     );
   };
-  
 
   if (loading) return <div className="profile_card">Loading profile...</div>;
   if (error) return <div className="profile_card error">{error}</div>;
@@ -92,9 +86,7 @@ function ProfileCard({ user }) {
     <div className="profile_card">
       <div className="profile-content">
         <div className="profile-left">
-          <div className="profile-image">
-            {renderAvatar()}
-          </div>
+          <div className="profile-image">{renderAvatar()}</div>
           <div className="employee-details">
             <h4 className="profile-name">{displayData.fullName || 'N/A'}</h4>
             <span>{displayData.email || 'N/A'}</span>

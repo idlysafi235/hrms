@@ -6,17 +6,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 20px;
   position: sticky;
   z-index: 999;
+  gap: 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding-right: 60px;
 }
 
 .topbar-left {
-  display: flex;
+  /* display: flex; */
   align-items: center;
-  padding: 10px;
+  /* padding: 10px; */
   width: 100%;
+  /* margin: 10px; */
 }
 
 .topbar-left h2 {
@@ -50,9 +53,12 @@
 
 .topbar-right {
   display: flex;
+  /* margin: 10px; */
   gap: 20px;
+  width: fit-content;
   align-items: center;
   position: relative;
+  justify-content: right;
 }
 
 .topbar-time {
@@ -91,18 +97,18 @@
   font-size: 14px;
 }
 
-.dropdown-panel > div {
+.dropdown-panel>div {
   padding: 10px 16px;
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
 
-.dropdown-panel > div:hover {
+.dropdown-panel>div:hover {
   background-color: #f5f5f5;
   color: #000;
 }
 
-.dropdown-panel > div + div {
+.dropdown-panel>div+div {
   border-top: 1px solid #e5e5e5;
 }
 
@@ -155,4 +161,21 @@
   font-size: 0.8rem;
   color: #FFD700;
   margin: 0;
+}
+
+@media (max-width: 768px) {
+
+  .topbar-left {
+    width: 100%;
+  }
+
+  .topbar-search {
+    min-width: 0px;
+    width: fit-content;
+  }
+
+  .topbar-time,
+  .grow {
+    display: none;
+  }
 }

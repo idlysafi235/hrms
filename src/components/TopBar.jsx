@@ -73,9 +73,7 @@ const TopBar = () => {
       return;
     }
 
-    const filtered = pages.filter((page) =>
-      page.name.toLowerCase().includes(val.toLowerCase())
-    );
+    const filtered = pages.filter((page) => page.name.toLowerCase().includes(val.toLowerCase()));
     setFilteredPages(filtered);
   };
 
@@ -92,7 +90,6 @@ const TopBar = () => {
     // window.location.href = `https://login.microsoftonline.com/common/oauth2/v2.0/logout?post_logout_redirect_uri=${postLogoutRedirectUri}`;
     navigate('/login');
   };
-  
 
   const renderAvatar = () => {
     if (profile?.profileImageUrl && !imageError) {
@@ -170,6 +167,7 @@ const TopBar = () => {
               alignItems: 'center',
               padding: '10px',
               width: '40px',
+              marginTop: '0px',
               height: '40px',
               border: '1px solid #C3B7FF',
               borderRadius: '8px',
@@ -187,7 +185,7 @@ const TopBar = () => {
             ref={profileRef}
           >
             {renderAvatar()}
-            <div className="grow">
+            <div className="grow ">
               <h1 className="text-white text-base font-semibold leading-tight">
                 {profile?.fullName || 'Loading...'}
               </h1>
@@ -205,10 +203,7 @@ const TopBar = () => {
               >
                 View Profile
               </div>
-              <div
-                className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-                onClick={handleLogout}
-              >
+              <div className="px-4 py-2 hover:bg-gray-100 cursor-pointer" onClick={handleLogout}>
                 Logout
               </div>
             </div>

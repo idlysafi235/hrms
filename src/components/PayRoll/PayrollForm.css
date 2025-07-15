@@ -1,9 +1,9 @@
 .run-payroll-form {
     display: flex;
     align-items: flex-end;
-    gap: 16px;
+    gap: calc(var(--spacing) * 4);
     flex-wrap: wrap;
-    margin-bottom: 20px;
+    margin-bottom: calc(var(--spacing) * 5);
   }
   
   .form-group {
@@ -14,29 +14,53 @@
   
   .form-group label {
     font-size: 14px;
-    margin-bottom: 4px;
-    color: #333;
+    margin-bottom: var(--spacing);
+    color: var(--foreground);
+    font-family: var(--font-sans);
   }
   
   .form-control {
-    padding: 8px;
+    padding: calc(var(--spacing) * 2);
     font-size: 14px;
     width: 100%;
     box-sizing: border-box;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background-color: var(--card);
+    color: var(--card-foreground);
   }
   
   .generate-button {
-    padding: 8px 16px;
-    background-color: #0066cc;
-    color: white;
+    padding: calc(var(--spacing) * 2) calc(var(--spacing) * 4);
+    background-color: var(--primary);
+    color: var(--primary-foreground);
     border: none;
     cursor: pointer;
     font-size: 14px;
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-sans);
+    box-shadow: var(--shadow-sm);
   }
   
   .generate-button:disabled {
-    background-color: #ccc;
+    background-color: var(--muted);
     cursor: not-allowed;
+    color: var(--muted-foreground);
+  }
+
+  @media (max-width: 640px) {
+    .run-payroll-form {
+      flex-direction: column;
+      gap: calc(var(--spacing) * 3);
+    }
+    
+    .form-group {
+      min-width: 100%;
+    }
+    
+    .generate-button {
+      width: 100%;
+      padding: calc(var(--spacing) * 3) calc(var(--spacing) * 4);
+    }
   }
   

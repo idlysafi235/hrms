@@ -2,38 +2,43 @@
 
 .helpdesk-container {
     max-width: 700px;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    color: #333;
+    padding: calc(var(--spacing) * 5);
+    font-family: var(--font-sans);
+    color: var(--foreground);
   }
   
   .helpdesk-form {
     display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
+    gap: calc(var(--spacing) * 2.5);
+    margin-bottom: calc(var(--spacing) * 5);
   }
   
   .helpdesk-form input {
     flex: 1;
-    padding: 8px;
+    padding: calc(var(--spacing) * 2);
     font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background-color: var(--card);
+    color: var(--card-foreground);
+    font-family: var(--font-sans);
   }
   
   .helpdesk-form button {
-    padding: 8px 16px;
+    padding: calc(var(--spacing) * 2) calc(var(--spacing) * 4);
     font-size: 1rem;
-    background-color: #007bff;
+    background-color: var(--primary);
     border: none;
-    color: white;
-    border-radius: 4px;
+    color: var(--primary-foreground);
+    border-radius: var(--radius-sm);
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-family: var(--font-sans);
+    font-weight: 500;
   }
   
   .helpdesk-form button:hover {
-    background-color: #0056b3;
+    background-color: var(--ring);
   }
   
   .faq-list,
@@ -44,25 +49,57 @@
   
   .faq-list li,
   .ticket-list li {
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #eee;
+    margin-bottom: calc(var(--spacing) * 3.75);
+    padding-bottom: calc(var(--spacing) * 2.5);
+    border-bottom: 1px solid var(--border);
+    color: var(--foreground);
+    font-family: var(--font-sans);
   }
   
   .faq-list strong {
     display: block;
-    margin-bottom: 5px;
-    color: #007bff;
+    margin-bottom: calc(var(--spacing) * 1.25);
+    color: var(--primary);
+    font-family: var(--font-sans);
   }
   
   .loading-indicator {
     font-weight: bold;
-    color: #555;
+    color: var(--muted-foreground);
+    font-family: var(--font-sans);
   }
   
   .error-message {
-    color: #b00020;
-    margin-bottom: 15px;
+    color: var(--destructive);
+    margin-bottom: calc(var(--spacing) * 3.75);
     font-weight: 600;
+    font-family: var(--font-sans);
+  }
+
+  @media (max-width: 768px) {
+    .helpdesk-container {
+      padding: calc(var(--spacing) * 4);
+    }
+    
+    .helpdesk-form {
+      flex-direction: column;
+      gap: calc(var(--spacing) * 3);
+    }
+    
+    .helpdesk-form button {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .helpdesk-container {
+      padding: calc(var(--spacing) * 3);
+    }
+    
+    .faq-list li,
+    .ticket-list li {
+      margin-bottom: calc(var(--spacing) * 3);
+      padding-bottom: calc(var(--spacing) * 2);
+    }
   }
   

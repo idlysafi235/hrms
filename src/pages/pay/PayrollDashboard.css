@@ -1,7 +1,7 @@
 .payroll-dashboard-container {
-    padding: 24px;
+    padding: calc(var(--spacing) * 6);
     min-height: 100vh;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: var(--font-sans);
     margin-left: 2%;
   }
   
@@ -9,47 +9,53 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 24px;
+    margin-bottom: calc(var(--spacing) * 6);
   }
   
   .dashboard-header h2 {
     margin: 0;
     font-size: 1.8rem;
+    color: var(--foreground);
+    font-family: var(--font-sans);
   }
   
   .dashboard-header button {
-    background-color: #0052cc;
-    color: white;
+    background-color: var(--primary);
+    color: var(--primary-foreground);
     border: none;
-    padding: 8px 16px;
+    padding: calc(var(--spacing) * 2) calc(var(--spacing) * 4);
     font-weight: 500;
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     cursor: pointer;
+    font-family: var(--font-sans);
   }
   
   .dashboard-header button:disabled {
-    background-color: #9bb1da;
+    background-color: var(--muted);
+    color: var(--muted-foreground);
     cursor: not-allowed;
   }
   
   .loading-indicator {
     font-size: 1.2rem;
     text-align: center;
-    padding: 40px;
+    padding: calc(var(--spacing) * 10);
+    color: var(--muted-foreground);
+    font-family: var(--font-sans);
   }
   
   .dashboard-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 20px;
+    gap: calc(var(--spacing) * 5);
   }
   
   .dashboard-card {
-    background: white;
-    border-left: 5px solid #007bff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    background: var(--card);
+    border-left: 5px solid var(--primary);
+    padding: calc(var(--spacing) * 5);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
     transition: transform 0.2s ease;
   }
   
@@ -58,19 +64,76 @@
   }
   
   .dashboard-card h4 {
-    margin-bottom: 8px;
+    margin-bottom: calc(var(--spacing) * 2);
     font-size: 1rem;
-    color: #444;
+    color: var(--card-foreground);
+    font-family: var(--font-sans);
   }
   
   .dashboard-card p {
     font-size: 1.4rem;
     font-weight: 600;
     margin: 0;
+    color: var(--primary);
+    font-family: var(--font-sans);
   }
   
   .dashboard-card.warning {
-    border-left-color: #f39c12;
+    border-left-color: var(--chart-2);
+  }
+  
+  .dashboard-card.warning p {
+    color: var(--chart-2);
+  }
+
+  @media (max-width: 768px) {
+    .payroll-dashboard-container {
+      padding: calc(var(--spacing) * 4);
+      margin-left: 0;
+    }
+    
+    .dashboard-header {
+      flex-direction: column;
+      gap: calc(var(--spacing) * 3);
+      align-items: stretch;
+    }
+    
+    .dashboard-header h2 {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    
+    .dashboard-grid {
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: calc(var(--spacing) * 4);
+    }
+    
+    .dashboard-card {
+      padding: calc(var(--spacing) * 4);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .payroll-dashboard-container {
+      padding: calc(var(--spacing) * 3);
+    }
+    
+    .dashboard-grid {
+      grid-template-columns: 1fr;
+      gap: calc(var(--spacing) * 3);
+    }
+    
+    .dashboard-card {
+      padding: calc(var(--spacing) * 3);
+    }
+    
+    .dashboard-card h4 {
+      font-size: 0.9rem;
+    }
+    
+    .dashboard-card p {
+      font-size: 1.2rem;
+    }
   }
 
   

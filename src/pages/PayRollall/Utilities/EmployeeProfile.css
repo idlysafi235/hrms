@@ -1,31 +1,33 @@
 .employee-profile-page {
-    padding: 20px;
-    font-family: Arial, sans-serif;
+    padding: calc(var(--spacing) * 5);
+    font-family: var(--font-sans);
   }
   
   .employee-tab-navigation {
-    margin-bottom: 20px;
+    margin-bottom: calc(var(--spacing) * 5);
   }
   
   .employee-tab-navigation button {
-    margin-right: 10px;
-    padding: 8px 16px;
+    margin-right: calc(var(--spacing) * 2.5);
+    padding: calc(var(--spacing) * 2) calc(var(--spacing) * 4);
     border: none;
-    background-color: #ddd;
+    background-color: var(--muted);
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     transition: background-color 0.3s ease;
+    color: var(--muted-foreground);
+    font-family: var(--font-sans);
   }
   
   .employee-tab-navigation button.active {
-    background-color: #007bff;
-    color: white;
+    background-color: var(--primary);
+    color: var(--primary-foreground);
   }
   
   .employee-info-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: calc(var(--spacing) * 5);
   }
   
   .employee-input-group {
@@ -35,13 +37,56 @@
   
   .employee-input-group label {
     font-weight: 600;
-    margin-bottom: 4px;
+    margin-bottom: var(--spacing);
+    color: var(--foreground);
+    font-family: var(--font-sans);
   }
   
   .employee-input-group input {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #f5f5f5;
+    padding: calc(var(--spacing) * 2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background-color: var(--input);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+  }
+
+  @media (max-width: 768px) {
+    .employee-profile-page {
+      padding: calc(var(--spacing) * 4);
+    }
+    
+    .employee-info-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: calc(var(--spacing) * 4);
+    }
+    
+    .employee-tab-navigation button {
+      margin-right: calc(var(--spacing) * 2);
+      padding: calc(var(--spacing) * 1.5) calc(var(--spacing) * 3);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .employee-profile-page {
+      padding: calc(var(--spacing) * 3);
+    }
+    
+    .employee-info-grid {
+      grid-template-columns: 1fr;
+      gap: calc(var(--spacing) * 3);
+    }
+    
+    .employee-tab-navigation {
+      display: flex;
+      flex-wrap: wrap;
+      gap: calc(var(--spacing) * 2);
+    }
+    
+    .employee-tab-navigation button {
+      margin-right: 0;
+      flex: 1;
+      min-width: fit-content;
+    }
   }
   

@@ -1,18 +1,19 @@
 .helpdesk-page {
-  padding: 2rem;
-  background-color: #fff;
-  border-radius: 8px;
+  padding: calc(var(--spacing) * 8);
+  background-color: var(--card);
+  border-radius: var(--radius-md);
   max-width: 1000px;
   margin: 0 auto;
 }
 
 .helpdesk-page h2 {
-  margin-bottom: 1.5rem;
-  color: #333;
+  margin-bottom: calc(var(--spacing) * 6);
+  color: var(--foreground);
+  font-family: var(--font-sans);
 }
 
 .section {
-  margin-top: 2rem;
+  margin-top: calc(var(--spacing) * 8);
 }
 
 .tickets-table {
@@ -22,38 +23,46 @@
 
 .tickets-table th,
 .tickets-table td {
-  padding: 12px 16px;
-  border: 1px solid #e0e0e0;
+  padding: calc(var(--spacing) * 3) calc(var(--spacing) * 4);
+  border: 1px solid var(--border);
   text-align: left;
+  font-family: var(--font-sans);
 }
 
 .tickets-table th {
-  background-color: #f9f9f9;
-  color: #555;
+  background-color: var(--muted);
+  color: var(--muted-foreground);
+  font-weight: 600;
+}
+
+.tickets-table td {
+  color: var(--card-foreground);
 }
 
 .tickets-table tr:nth-child(even) {
-  background-color: #f7f7f7;
+  background-color: var(--accent);
 }
 
 .status-badge {
   display: inline-block;
-  padding: 4px 8px;
-  border-radius: 4px;
+  padding: var(--spacing) calc(var(--spacing) * 2);
+  border-radius: var(--radius-sm);
   font-size: 0.85rem;
-  color: #fff;
+  color: var(--primary-foreground);
+  font-family: var(--font-sans);
+  font-weight: 500;
 }
 
 .status-badge.resolved {
-  background-color: #4caf50;
+  background-color: var(--chart-1);
 }
 
 .status-badge.in-progress {
-  background-color: #ff9800;
+  background-color: var(--chart-2);
 }
 
 .status-badge.open {
-  background-color: #2196f3;
+  background-color: var(--primary);
 }
 
 .faq-list {
@@ -62,15 +71,17 @@
 }
 
 .faq-list li {
-  margin-bottom: 1rem;
-  background: #f5f5f5;
-  padding: 1rem;
-  border-radius: 6px;
+  margin-bottom: calc(var(--spacing) * 4);
+  background: var(--muted);
+  padding: calc(var(--spacing) * 4);
+  border-radius: var(--radius-sm);
 }
 
 .faq-list li strong {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: calc(var(--spacing) * 2);
+  color: var(--foreground);
+  font-family: var(--font-sans);
 }
 
 .document-list {
@@ -79,15 +90,55 @@
 }
 
 .document-list li {
-  margin-bottom: 0.75rem;
+  margin-bottom: calc(var(--spacing) * 3);
+  font-family: var(--font-sans);
 }
 
 .document-list a {
   text-decoration: none;
-  color: #1976d2;
+  color: var(--primary);
   font-weight: 500;
+  font-family: var(--font-sans);
 }
 
 .document-list a:hover {
   text-decoration: underline;
+  color: var(--ring);
+}
+
+@media (max-width: 768px) {
+  .helpdesk-page {
+    padding: calc(var(--spacing) * 5);
+  }
+  
+  .tickets-table th,
+  .tickets-table td {
+    padding: calc(var(--spacing) * 2) calc(var(--spacing) * 2.5);
+    font-size: 14px;
+  }
+  
+  .faq-list li {
+    padding: calc(var(--spacing) * 3);
+    margin-bottom: calc(var(--spacing) * 3);
+  }
+}
+
+@media (max-width: 480px) {
+  .helpdesk-page {
+    padding: calc(var(--spacing) * 3);
+  }
+  
+  .tickets-table {
+    font-size: 13px;
+  }
+  
+  .tickets-table th,
+  .tickets-table td {
+    padding: calc(var(--spacing) * 1.5) calc(var(--spacing) * 2);
+  }
+  
+  .status-badge {
+    font-size: 0.75rem;
+    padding: calc(var(--spacing) * 0.75) calc(var(--spacing) * 1.5);
+  }
 }

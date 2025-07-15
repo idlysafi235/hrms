@@ -1,38 +1,41 @@
 /* src/components/Pay/Tax.css */
 .tax-container {
-    padding: 24px;
-    background-color: #f9f9f9;
-    color: #333;
-
+    padding: calc(var(--spacing) * 6);
+    background-color: var(--background);
+    color: var(--foreground);
   }
   
   .tax-container h2 {
     font-weight: 600;
-    margin-bottom: 24px;
+    margin-bottom: calc(var(--spacing) * 6);
+    font-family: var(--font-sans);
+    color: var(--foreground);
   }
   
   .tax-section {
-    background: white;
-    padding: 16px 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    background: var(--card);
+    padding: calc(var(--spacing) * 4) calc(var(--spacing) * 5);
+    border-radius: var(--radius-md);
+    margin-bottom: calc(var(--spacing) * 5);
+    box-shadow: var(--shadow-sm);
   }
   
   .tax-section h4 {
-    margin-bottom: 12px;
-    color: #444;
+    margin-bottom: calc(var(--spacing) * 3);
+    color: var(--card-foreground);
     font-size: 16px;
+    font-family: var(--font-sans);
   }
   
   .tax-value {
     font-size: 18px;
     font-weight: bold;
-    color: #0052cc;
+    color: var(--primary);
+    font-family: var(--font-sans);
   }
   
   .tax-value.payable {
-    color: #c62828;
+    color: var(--destructive);
   }
   
   .deductions-table {
@@ -42,13 +45,20 @@
   
   .deductions-table th,
   .deductions-table td {
-    padding: 10px 14px;
+    padding: calc(var(--spacing) * 2.5) calc(var(--spacing) * 3.5);
     text-align: left;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--border);
+    font-family: var(--font-sans);
   }
   
   .deductions-table th {
-    background-color: #f0f0f0;
+    background-color: var(--muted);
+    color: var(--muted-foreground);
+    font-weight: 600;
+  }
+  
+  .deductions-table td {
+    color: var(--card-foreground);
   }
   
   .tax-documents {
@@ -60,17 +70,64 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 0;
-    border-bottom: 1px dashed #ccc;
+    padding: calc(var(--spacing) * 2) 0;
+    border-bottom: 1px dashed var(--border);
+    color: var(--card-foreground);
+    font-family: var(--font-sans);
   }
   
   .tax-documents a {
-    color: #0052cc;
+    color: var(--primary);
     text-decoration: none;
     font-weight: 500;
+    font-family: var(--font-sans);
   }
   
   .tax-documents a:hover {
     text-decoration: underline;
+    color: var(--ring);
+  }
+
+  @media (max-width: 768px) {
+    .tax-container {
+      padding: calc(var(--spacing) * 4);
+    }
+    
+    .tax-section {
+      padding: calc(var(--spacing) * 3) calc(var(--spacing) * 4);
+      margin-bottom: calc(var(--spacing) * 4);
+    }
+    
+    .deductions-table th,
+    .deductions-table td {
+      padding: calc(var(--spacing) * 2) calc(var(--spacing) * 2.5);
+      font-size: 14px;
+    }
+    
+    .tax-value {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .tax-container {
+      padding: calc(var(--spacing) * 3);
+    }
+    
+    .tax-section {
+      padding: calc(var(--spacing) * 2.5) calc(var(--spacing) * 3);
+    }
+    
+    .deductions-table th,
+    .deductions-table td {
+      padding: calc(var(--spacing) * 1.5) calc(var(--spacing) * 2);
+      font-size: 13px;
+    }
+    
+    .tax-documents li {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: calc(var(--spacing) * 1);
+    }
   }
   

@@ -1,5 +1,5 @@
 .payroll-tables {
-    margin-top: 1.5rem;
+    margin-top: calc(var(--spacing) * 6);
   }
   
   .filter-bar {
@@ -7,71 +7,99 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: 1rem;
+    margin-bottom: calc(var(--spacing) * 4);
+    gap: calc(var(--spacing) * 2);
   }
   
   .year-navigation {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: calc(var(--spacing) * 2);
   }
   
   .year-navigation button {
-    padding: 0.3rem 0.6rem;
+    padding: calc(var(--spacing) * 1.2) calc(var(--spacing) * 2.4);
     font-size: 0.9rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background-color: var(--card);
+    color: var(--card-foreground);
+    font-family: var(--font-sans);
   }
   
   .year-navigation span {
     font-weight: 600;
     font-size: 1rem;
+    color: var(--foreground);
+    font-family: var(--font-sans);
   }
   
   .filter-bar label {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: calc(var(--spacing) * 2);
     font-weight: 500;
     font-size: 0.95rem;
+    color: var(--foreground);
+    font-family: var(--font-sans);
   }
   
   .filter-bar select {
-    padding: 0.3rem 0.6rem;
+    padding: calc(var(--spacing) * 1.2) calc(var(--spacing) * 2.4);
     font-size: 0.9rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background-color: var(--card);
+    color: var(--card-foreground);
   }
   
   .payroll-table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 2rem;
+    margin-bottom: calc(var(--spacing) * 8);
+    background-color: var(--card);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
   }
   
   .payroll-table th,
   .payroll-table td {
-    border: 1px solid #ddd;
-    padding: 0.5rem;
+    border: 1px solid var(--border);
+    padding: calc(var(--spacing) * 2);
     text-align: center;
+    font-family: var(--font-sans);
   }
   
   .payroll-table th {
-    background: #f2f2f2;
+    background: var(--muted);
+    color: var(--muted-foreground);
+    font-weight: 600;
+  }
+  
+  .payroll-table td {
+    color: var(--card-foreground);
   }
   
   .link-button {
     background: none;
     border: none;
-    color: #007bff;
+    color: var(--primary);
     cursor: pointer;
     padding: 0;
     font-weight: 500;
+    font-family: var(--font-sans);
   }
   
   .link-button:hover {
     text-decoration: underline;
+    color: var(--ring);
   }
   
   .empty-state {
-    color: #555;
+    color: var(--muted-foreground);
     font-style: italic;
+    font-family: var(--font-sans);
   }
 
   .year-display {
@@ -79,11 +107,60 @@
     font-size: 50px;
     min-width: 80px;
     text-align: center;
+    color: var(--foreground);
+    font-family: var(--font-sans);
   }
   
   .year-arrow {
     font-size: 20px;
     cursor: pointer;   
     transition: color 0.2s ease;
+    color: var(--primary);
+  }
+  
+  .year-arrow:hover {
+    color: var(--ring);
+  }
+
+  @media (max-width: 768px) {
+    .filter-bar {
+      flex-direction: column;
+      align-items: stretch;
+      gap: calc(var(--spacing) * 3);
+    }
+    
+    .year-navigation {
+      justify-content: center;
+    }
+    
+    .year-display {
+      font-size: 36px;
+      min-width: 60px;
+    }
+    
+    .payroll-table {
+      font-size: 0.875rem;
+    }
+    
+    .payroll-table th,
+    .payroll-table td {
+      padding: calc(var(--spacing) * 1.5);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .payroll-table {
+      font-size: 0.75rem;
+    }
+    
+    .payroll-table th,
+    .payroll-table td {
+      padding: var(--spacing);
+    }
+    
+    .year-display {
+      font-size: 28px;
+      min-width: 50px;
+    }
   }
   

@@ -1,56 +1,103 @@
 .finance-panel {
-    padding: 30px;
-    background-color: #fff;
-    border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    font-family: 'Segoe UI', sans-serif;
+    padding: calc(var(--spacing) * 7.5);
+    background-color: var(--card);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-md);
+    font-family: var(--font-sans);
   }
   
   .finance-panel h2 {
     font-size: 22px;
-    color: #1a1a1a;
-    margin-bottom: 20px;
+    color: var(--foreground);
+    margin-bottom: calc(var(--spacing) * 5);
+    font-family: var(--font-sans);
   }
   
   .finance-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 10px;
+    margin-top: calc(var(--spacing) * 2.5);
   }
   
   .finance-table th, .finance-table td {
-    border: 1px solid #ddd;
-    padding: 12px;
+    border: 1px solid var(--border);
+    padding: calc(var(--spacing) * 3);
     text-align: left;
     font-size: 14px;
+    font-family: var(--font-sans);
   }
   
   .finance-table th {
-    background-color: #f5f7fa;
+    background-color: var(--muted);
     font-weight: 600;
-    color: #333;
+    color: var(--muted-foreground);
+  }
+  
+  .finance-table td {
+    color: var(--card-foreground);
   }
   
   .finance-table tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: var(--accent);
   }
   
   .loading-text {
     font-size: 16px;
-    color: #777;
-    padding: 20px;
+    color: var(--muted-foreground);
+    padding: calc(var(--spacing) * 5);
+    font-family: var(--font-sans);
   }
   
   .approve-btn {
-    padding: 6px 14px;
-    background-color: #067bff;
-    color: white;
+    padding: calc(var(--spacing) * 1.5) calc(var(--spacing) * 3.5);
+    background-color: var(--primary);
+    color: var(--primary-foreground);
     border: none;
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     cursor: pointer;
+    font-family: var(--font-sans);
+    font-weight: 500;
   }
   
   .approve-btn:hover {
-    background-color: #055fd0;
+    background-color: var(--ring);
+  }
+
+  @media (max-width: 768px) {
+    .finance-panel {
+      padding: calc(var(--spacing) * 5);
+    }
+    
+    .finance-table {
+      font-size: 13px;
+    }
+    
+    .finance-table th, .finance-table td {
+      padding: calc(var(--spacing) * 2);
+    }
+    
+    .finance-panel h2 {
+      font-size: 20px;
+      margin-bottom: calc(var(--spacing) * 4);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .finance-panel {
+      padding: calc(var(--spacing) * 3);
+    }
+    
+    .finance-table {
+      font-size: 12px;
+    }
+    
+    .finance-table th, .finance-table td {
+      padding: calc(var(--spacing) * 1.5);
+    }
+    
+    .approve-btn {
+      padding: calc(var(--spacing) * 1.2) calc(var(--spacing) * 2.5);
+      font-size: 13px;
+    }
   }
   

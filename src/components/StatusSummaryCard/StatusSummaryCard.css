@@ -5,8 +5,7 @@
   display: flex;
   align-items: stretch;
   justify-content: stretch;
-  /* background: linear-gradient(125.41deg, #21093D -2.21%, #5818A3 101.21%); */
-  color: #21093D;
+  color: var(--foreground);
 }
 
 .statussummary_wrapper {
@@ -14,21 +13,19 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid #e0e0e0;
-  /* color: #d4d2d6; */
-  border-radius: 10px;
-  padding: 16px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(125.41deg, #21093D -2.21%, #5818A3 101.21%);
-  border-top: 4px solid #0ab031;
-  /* height: 100%; */
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+  background: var(--gradient-primary, linear-gradient(125.41deg, hsl(var(--primary)) -2.21%, hsl(var(--primary-dark)) 101.21%));
+  border-top: 4px solid var(--success);
   box-sizing: border-box;
-  color: white;
+  color: var(--primary-foreground);
 }
 
 .clockin-active {
-  background: linear-gradient(125.41deg, #21093D -2.21%, #5818A3 101.21%);
-  color: white;
+  background: var(--gradient-primary, linear-gradient(125.41deg, hsl(var(--primary)) -2.21%, hsl(var(--primary-dark)) 101.21%));
+  color: var(--primary-foreground);
 }
 
 .statussummary_content {
@@ -36,17 +33,19 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  gap: 12px;
+  gap: var(--spacing-md);
 }
 
 .statussummary_title {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: rgba(255, 255, 255, 1);
+  color: var(--primary-foreground);
 }
 .statussummary_title h2{
-  color: rgba(255, 255, 255, 1);
+  color: var(--primary-foreground);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
 }
 
 
@@ -64,16 +63,17 @@
 }
 
 .statussummary_duration-wrapper h4 {
-  margin-top: 4px;
-  font-weight: 600;
+  margin-top: var(--spacing-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--primary-foreground);
 }
 
 .statussummary_location-absolute {
   position: absolute;
   top: 100%;
-  margin-top: 4px;
-  font-size: 0.85rem;
-  /* color: rgba(255, 255, 255, 1); */
+  margin-top: var(--spacing-xs);
+  font-size: var(--font-size-sm);
+  color: var(--primary-foreground);
   font-style: italic;
   animation: fadeInOut 7s ease-in-out;
   white-space: nowrap;
@@ -103,65 +103,92 @@
 .statussummary_buttons {
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: var(--spacing-sm);
 }
 
 .statussummary_button {
-  padding: 8px 10px;
+  padding: var(--spacing-sm) var(--spacing-sm);
   flex: 1 1 120px;
   border: none;
-  border-radius: 6px;
+  border-radius: var(--radius);
   cursor: pointer;
   font-family: inherit;
-  font-size: 1rem;
-  color: #21093D;
-  transition: all 0.3s ease, color 0.3s ease;
+  font-size: var(--font-size-base);
+  color: var(--foreground);
+  transition: all 0.3s ease;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: var(--spacing-sm);
+  font-weight: var(--font-weight-medium);
 }
 
 .statussummary_clockin-button {
-  background-color: #91ff5e;
-  border: 1px solid #21093D;
+  background-color: var(--success);
+  border: 1px solid var(--border);
+  color: var(--success-foreground);
 }
 
 .statussummary_clockin-button:hover {
-  background-color: #60f61b !important;
+  background-color: var(--success-hover, hsl(var(--success) / 0.8));
 }
 
 .statussummary_clockout-button {
-  background-color: #ef4444;
-  color: white;
+  background-color: var(--destructive);
+  color: var(--destructive-foreground);
 }
 
 .statussummary_clockout-button:hover {
-  background-color: #cf0202 !important;
+  background-color: var(--destructive-hover, hsl(var(--destructive) / 0.8));
 }
 
 .statussummary_button.disabled {
-  background-color: #cccccc !important;
+  background-color: var(--muted) !important;
   cursor: not-allowed;
-  color: #666666 !important;
+  color: var(--muted-foreground) !important;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
+  .summary_card {
+    min-width: 280px;
+  }
+  
   .statussummary_wrapper {
     flex-direction: column;
+    padding: var(--spacing-md);
   }
 
   .statussummary_buttons {
     flex-direction: row;
-    gap: 8px;
+    gap: var(--spacing-xs);
   }
 
   .statussummary_button {
     flex: 1;
-    padding: 8px;
-    font-size: 0.8rem;
+    padding: var(--spacing-xs);
+    font-size: var(--font-size-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .summary_card {
+    min-width: 250px;
+  }
+  
+  .statussummary_wrapper {
+    padding: var(--spacing-sm);
+  }
+  
+  .statussummary_buttons {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+  
+  .statussummary_button {
+    padding: var(--spacing-sm);
+    font-size: var(--font-size-xs);
   }
 }
 
@@ -177,17 +204,19 @@
 
 
 .statussummary_big-num {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin: 0 4px;
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  margin: 0 var(--spacing-xs);
+  color: var(--primary-foreground);
 }
 
 .statussummary_location {
-  margin-top: 8px;
-  font-size: 0.85rem;
+  margin-top: var(--spacing-sm);
+  font-size: var(--font-size-sm);
   font-style: italic;
   white-space: nowrap;
   animation: fadeInOut 7s ease-in-out;
+  color: var(--primary-foreground);
 }
 
 @keyframes fadeInOut {
@@ -211,14 +240,12 @@
 .weekly_summary {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: var(--spacing-sm);
   overflow: hidden;
   overflow-y: scroll;
   height: 48px;
   scrollbar-width: none;
-  /* Firefox */
   -ms-overflow-style: none;
-  /* Internet Explorer 10+ */
 }
 
 .weekly_summary::-webkit-scrollbar {
@@ -230,11 +257,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
+  color: var(--primary-foreground);
 }
 
 h2 {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
 }

@@ -1,36 +1,42 @@
+
 /* Responsive */
 @media (max-width: 1024px) {
-    .attendance-history-container {
-      padding: 1rem 1.5rem;
-    }
-    .attendance-charts {
-      grid-template-columns: 1fr 1fr;
-    }
+  .attendance-history-container {
+    padding: var(--spacing-md) var(--spacing-lg);
   }
-  
-  @media (max-width: 768px) {
-    .attendance-history-container {
-      margin-left: 0;
-      margin-top: 60px;
-      padding: 1rem;
-    }
-  
-    .attendance-charts {
-      grid-template-columns: 1fr;
-    }
-  
-    .attendance-kpi-cards,
-    .additional-kpi-cards {
-      grid-template-columns: 1fr;
-    }
-  
-    .filters-and-controls {
-      flex-direction: column;
-      align-items: stretch;
-    }
-  
-    .export-print-controls {
-      justify-content: center;
-    }
+  .attendance-charts {
+    grid-template-columns: 1fr 1fr;
   }
-  
+}
+
+@media (max-width: 768px) {
+  .attendance-history-container {
+    margin-left: 0;
+    margin-top: 60px;
+    padding: var(--spacing-md);
+  }
+
+  .attendance-charts {
+    grid-template-columns: 1fr;
+  }
+
+  .attendance-kpi-cards,
+  .additional-kpi-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .filters-and-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .export-print-controls {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .attendance-history-container {
+    padding: var(--spacing-sm);
+  }
+}

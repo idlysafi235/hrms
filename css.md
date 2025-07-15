@@ -4,7 +4,7 @@ components/AttendanceHistory/SelectedDateDetails.css
 components/AttendanceHistory/TeamOverview.css
 components/AvailableLeavesBox/AvailableLeaves.css
 components/Calender/AttandanceMarker.css
-components/DownloadButton/DownloadButton.css
+components/DownloadButton/DownloadButton.css ✅
 components/Events/Events.css
 components/HolidayList/HolidayList.css
 components/HoverCards/HoverCards.css
@@ -14,7 +14,7 @@ components/LeaveManagement/LeaveFilters.css
 components/LeaveManagement/LeaveModal.css
 components/LeaveManagement/LeaveStats.css
 components/LeaveManagement/LeaveTable.css
-components/LeaveManagement/StatsCards.css
+components/LeaveManagement/StatsCards.css ✅
 components/Modals/AddEmergencyContactModal.css
 components/Modals/AssignModal.css
 components/Modals/CreateAssetModal.css
@@ -23,14 +23,14 @@ components/Modals/EmployeeEditModal.css
 components/Modals/EmployeeViewModal.css
 components/Modals/RequestAssetModal.css
 components/Modals/RequestHRModal.css
-components/MoreActionsButton/MoreActionsButton.css
+components/MoreActionsButton/MoreActionsButton.css ✅
 components/Notifications/Notifications.css
 components/PayHome/DashboardCard.css
 components/PayHome/PayslipSection.css
-components/PayRoll/Alerts.css
-components/PayRoll/PayrollForm.css
+components/PayRoll/Alerts.css ✅
+components/PayRoll/PayrollForm.css ✅
 components/PayRoll/PayrollModal.css
-components/PayRoll/PayrollTables.css
+components/PayRoll/PayrollTables.css ✅
 components/Profile/BankDetails.css
 components/Profile/documents.css
 components/Profile/education.css
@@ -94,13 +94,13 @@ pages/Onboarding/PersonalInfoForm.css
 pages/Onboarding/ReviewSubmitForm.css
 pages/Onboarding/SkillsCertsForm.css
 pages/pay/FinanceReports.css
-pages/pay/Helpdesk.css
+pages/pay/Helpdesk.css ✅
 pages/pay/PayHome.css
-pages/pay/PayrollDashboard.css
+pages/pay/PayrollDashboard.css ✅
 pages/pay/ReimbursementApprovals.css
 pages/pay/SalaryProcessing.css
 pages/pay/SalaryStructureManagement.css
-pages/pay/Tax.css
+pages/pay/Tax.css ✅
 pages/pay1/BankInfoMock.css
 pages/pay1/BenefitsMock.css
 pages/pay1/EmployeePayDataMock.css
@@ -108,41 +108,41 @@ pages/pay1/LedgerMock.css
 pages/pay1/MyPayslipsMock.css
 pages/pay1/PayPoliciesMock.css
 pages/pay1/PayrollSummaryMock.css
-pages/pay1/PaySettingsMock.css
+pages/pay1/PaySettingsMock.css ✅
 pages/pay1/ReportsMock.css
 pages/pay1/RunPayrollMock.css
 pages/pay1/TaxDocumentsMock.css
 pages/pay1/TaxWithholdingMock.css
 pages/pay1/UserRolesMock.css
-pages/PayRollall/Admin/Admin.css
+pages/PayRollall/Admin/Admin.css ✅
 pages/PayRollall/Admin/DashboardMock.css
 pages/PayRollall/Admin/DocumentManagement.css
 pages/PayRollall/Admin/ImportTools.css
 pages/PayRollall/Admin/OrganizationSetup.css
-pages/PayRollall/Admin/PayComponentMaster.css
+pages/PayRollall/Admin/PayComponentMaster.css ✅
 pages/PayRollall/Admin/PayDashboard.css
 pages/PayRollall/Admin/PayrollConfiguration.css
 pages/PayRollall/Admin/PolicySettings.css
 pages/PayRollall/Admin/SalaryStructureTemplates.css
 pages/PayRollall/Admin/SystemLogs.css
 pages/PayRollall/Admin/TaxConfig.css
-pages/PayRollall/Admin/TaxSetupMock.css
+pages/PayRollall/Admin/TaxSetup.css ✅
 pages/PayRollall/Finance/AuditLog.css
 pages/PayRollall/Finance/BankAdvice.css
-pages/PayRollall/Finance/DeclarationsApproval.css
+pages/PayRollall/Finance/DeclarationsApproval.css ✅
 pages/PayRollall/Finance/FinalSettlement.css
-pages/PayRollall/Finance/Finance.css
-pages/PayRollall/Finance/FinancePanel.css
+pages/PayRollall/Finance/Finance.css ✅
+pages/PayRollall/Finance/FinancePanel.css ✅
 pages/PayRollall/Finance/FinanceReports.css
 pages/PayRollall/Finance/PayoutApprovals.css
 pages/PayRollall/Finance/ReimbursmentApprovals.css
 pages/PayRollall/Finance/RunPayroll.css
 pages/PayRollall/Finance/TDSSummary.css
-pages/PayRollall/Helpdesk/HelpdeskPage.css
+pages/PayRollall/Helpdesk/HelpdeskPage.css ✅
 pages/PayRollall/Helpdesk/MyTickets.css
 pages/PayRollall/HR/AttendanceImport.css
 pages/PayRollall/HR/EmployeePaySettings.css
-pages/PayRollall/HR/HRPanel.css
+pages/PayRollall/HR/HRPanel.css ✅
 pages/PayRollall/HR/LeaveAdjustments.css
 pages/PayRollall/HR/OffCyclePay.css
 pages/PayRollall/HR/PayrollRemarks.css
@@ -169,7 +169,7 @@ pages/PayRollall/Tax/TaxDeclarationsStyles.css
 pages/PayRollall/Tax/TaxStyles.css
 pages/PayRollall/Utilities/AadharPanLink.css
 pages/PayRollall/Utilities/ContributionFund.css
-pages/PayRollall/Utilities/EmployeeProfile.css
+pages/PayRollall/Utilities/EmployeeProfile.css ✅
 pages/PayRollall/Utilities/EsiForm.css
 pages/PayRollall/Utilities/Form11.css
 pages/PayRollall/Utilities/UtilitiesPage.css

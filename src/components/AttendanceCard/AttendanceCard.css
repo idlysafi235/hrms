@@ -1,19 +1,21 @@
 .attendance-card {
-  background: var(--colors-white-100, rgba(255, 255, 255, 1));
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-  padding: 20px 24px;
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  padding: calc(var(--spacing) * 5) calc(var(--spacing) * 6);
   box-sizing: border-box;
   height: 100%;
   cursor: pointer;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
+  font-family: var(--font-sans);
+  color: var(--card-foreground);
   transition: box-shadow 0.2s ease;
+  border: 1px solid var(--border);
 }
 
 
 .attendance-card:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
 }
 
 .attendance-card-title {
@@ -21,14 +23,42 @@
   align-items: center;
   font-weight: 700;
   font-size: 1.1rem;
-  color:rgba(33, 9, 61, 1);
-  margin-bottom: 12px;
-  gap: 8px;
+  color: var(--primary);
+  margin-bottom: calc(var(--spacing) * 3);
+  gap: calc(var(--spacing) * 2);
+}
+
+@media (max-width: 768px) {
+  .attendance-card {
+    padding: calc(var(--spacing) * 4) calc(var(--spacing) * 4);
+  }
+  
+  .attendance-card-title {
+    font-size: 1rem;
+    margin-bottom: calc(var(--spacing) * 2);
+  }
+}
+
+@media (max-width: 480px) {
+  .attendance-card {
+    padding: calc(var(--spacing) * 3) calc(var(--spacing) * 3);
+  }
+  
+  .attendance-card-title {
+    font-size: 0.95rem;
+    gap: calc(var(--spacing) * 1.5);
+  }
 }
 
 .attendance-icon {
-  color: #0ab031;
+  color: var(--secondary);
   font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .attendance-icon {
+    font-size: 1.1rem;
+  }
 }
 
 .attendance-chart-box {
@@ -36,13 +66,18 @@
   height: 200px;
 }
 
-.recharts-tooltip-wrapper {
-  font-size: 0.85rem;
-}
-
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .attendance-chart-box {
     height: 180px;
   }
+}
+
+@media (max-width: 480px) {
+  .attendance-chart-box {
+    height: 160px;
+  }
+}
+
+.recharts-tooltip-wrapper {
+  font-size: 0.85rem;
 }

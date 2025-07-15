@@ -1,26 +1,106 @@
-/* src/components/StatsCards.css */
 
+/* Stats Cards using :root variables */
 .stats-cards {
   display: flex;
-  gap: 1rem;
-  margin-bottom: 25px;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-6);
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .card {
   flex: 1 1 30%;
-  background-color: #f7f9fc;
-  padding: 20px 25px;
-  border-radius: 10px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  background: var(--card);
+  color: var(--card-foreground);
+  padding: var(--spacing-5) var(--spacing-6);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
   text-align: center;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #555;
-  transition: box-shadow 0.3s ease;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+  min-width: 200px;
 }
 
 .card:hover {
-  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.card h3 {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--muted-foreground);
+  margin-bottom: var(--spacing-2);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card .value {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--primary);
+  margin-bottom: var(--spacing-1);
+}
+
+.card .subtitle {
+  font-size: var(--font-size-xs);
+  color: var(--muted-foreground);
+  font-weight: var(--font-weight-normal);
+}
+
+/* Card variants */
+.card.primary {
+  border-left: 4px solid var(--primary);
+}
+
+.card.success {
+  border-left: 4px solid var(--success);
+}
+
+.card.warning {
+  border-left: 4px solid var(--warning);
+}
+
+.card.destructive {
+  border-left: 4px solid var(--destructive);
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .stats-cards {
+    gap: var(--spacing-3);
+  }
+  
+  .card {
+    flex: 1 1 45%;
+    padding: var(--spacing-4) var(--spacing-5);
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-cards {
+    flex-direction: column;
+    gap: var(--spacing-3);
+  }
+  
+  .card {
+    flex: 1;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: var(--spacing-3) var(--spacing-4);
+  }
+  
+  .card .value {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .card h3 {
+    font-size: var(--font-size-xs);
+  }
 }

@@ -1,25 +1,125 @@
+
+/* Pay Settings using :root variables */
 .pay-settings {
-    padding: 2rem;
-    max-width: 600px;
-   
-    font-family: Arial, sans-serif;
+  padding: var(--spacing-8);
+  max-width: 600px;
+  background: var(--card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  color: var(--card-foreground);
+}
+
+.pay-settings h2 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--foreground);
+  margin-bottom: var(--spacing-6);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: var(--spacing-4);
+}
+
+.setting-group {
+  margin-bottom: var(--spacing-4);
+  display: flex;
+  flex-direction: column;
+}
+
+.setting-group label {
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-2);
+  color: var(--foreground);
+  font-size: var(--font-size-sm);
+}
+
+.setting-group input,
+.setting-group select {
+  padding: var(--spacing-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--background);
+  color: var(--foreground);
+  font-size: var(--font-size-sm);
+  transition: border-color 0.15s ease;
+}
+
+.setting-group input:focus,
+.setting-group select:focus {
+  outline: none;
+  border-color: var(--ring);
+  box-shadow: 0 0 0 3px var(--ring);
+}
+
+.setting-group input:hover,
+.setting-group select:hover {
+  border-color: var(--muted-foreground);
+}
+
+/* Form actions */
+.settings-actions {
+  margin-top: var(--spacing-6);
+  display: flex;
+  gap: var(--spacing-3);
+  justify-content: flex-end;
+}
+
+.settings-actions button {
+  padding: var(--spacing-3) var(--spacing-6);
+  border-radius: var(--radius);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.settings-actions .primary-btn {
+  background: var(--primary);
+  color: var(--primary-foreground);
+  border: none;
+}
+
+.settings-actions .primary-btn:hover {
+  background: var(--primary);
+  opacity: 0.9;
+}
+
+.settings-actions .secondary-btn {
+  background: var(--secondary);
+  color: var(--secondary-foreground);
+  border: 1px solid var(--border);
+}
+
+.settings-actions .secondary-btn:hover {
+  background: var(--secondary);
+  opacity: 0.8;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .pay-settings {
+    padding: var(--spacing-6);
+    max-width: 100%;
   }
   
-  .setting-group {
-    margin-bottom: 1rem;
-    display: flex;
+  .settings-actions {
     flex-direction: column;
   }
   
-  .setting-group label {
-    font-weight: bold;
-    margin-bottom: 0.4rem;
+  .settings-actions button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .pay-settings {
+    padding: var(--spacing-4);
+  }
+  
+  .pay-settings h2 {
+    font-size: var(--font-size-xl);
   }
   
   .setting-group input,
   .setting-group select {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: var(--spacing-2);
   }
-  
+}

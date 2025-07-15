@@ -1,0 +1,96 @@
+
+/* More Actions Button using :root variables */
+.more-actions-button {
+  position: relative;
+  display: inline-block;
+}
+
+.more-actions-button > button {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-2) var(--spacing-3);
+  background: var(--background);
+  border: 1px solid var(--primary);
+  border-radius: var(--radius);
+  color: var(--primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.more-actions-button > button:hover {
+  background: var(--primary);
+  color: var(--primary-foreground);
+  box-shadow: var(--shadow-sm);
+}
+
+.more-actions-button > button:focus {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.more-actions-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: var(--spacing-1);
+  background: var(--popover);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  z-index: 50;
+  min-width: 180px;
+  overflow: hidden;
+}
+
+.more-actions-dropdown ul {
+  list-style: none;
+  padding: var(--spacing-1);
+  margin: 0;
+}
+
+.more-actions-dropdown li {
+  margin: 0;
+}
+
+.more-actions-dropdown button {
+  width: 100%;
+  text-align: left;
+  padding: var(--spacing-2) var(--spacing-3);
+  background: transparent;
+  border: none;
+  color: var(--popover-foreground);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  border-radius: calc(var(--radius) - 2px);
+  transition: background-color 0.15s ease;
+}
+
+.more-actions-dropdown button:hover {
+  background: var(--accent);
+  color: var(--accent-foreground);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .more-actions-dropdown {
+    right: auto;
+    left: 0;
+    min-width: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .more-actions-button > button {
+    padding: var(--spacing-2);
+    font-size: var(--font-size-xs);
+  }
+  
+  .more-actions-dropdown {
+    min-width: 140px;
+  }
+}

@@ -1,0 +1,116 @@
+
+.contact-address-form {
+  max-width: 800px;
+  margin: var(--spacing-8) auto;
+  padding: var(--spacing-6);
+  background: var(--card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
+}
+
+.form-title {
+  text-align: center;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--spacing-6);
+  color: var(--foreground);
+}
+
+.form-row {
+  margin-bottom: var(--spacing-5);
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row label {
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-2);
+  color: var(--foreground);
+  font-size: var(--font-size-sm);
+}
+
+.form-row input[type='text'],
+.form-row input[type='email'],
+.form-row input[type='tel'] {
+  padding: var(--spacing-3);
+  font-size: var(--font-size-base);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--background);
+  color: var(--foreground);
+  transition: border-color 0.2s ease;
+}
+
+.form-row input:focus {
+  outline: none;
+  border-color: var(--ring);
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+.form-button-container {
+  text-align: center;
+  margin-top: var(--spacing-8);
+}
+
+.next-button {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  padding: var(--spacing-3) var(--spacing-6);
+  font-size: var(--font-size-base);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: var(--font-weight-medium);
+}
+
+.next-button:hover:not(:disabled) {
+  background-color: hsl(var(--primary) / 0.9);
+  box-shadow: var(--shadow-md);
+}
+
+.next-button:disabled {
+  background-color: var(--muted);
+  color: var(--muted-foreground);
+  cursor: not-allowed;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .contact-address-form {
+    margin: var(--spacing-4) auto;
+    padding: var(--spacing-4);
+  }
+  
+  .form-title {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-4);
+  }
+  
+  .form-row {
+    margin-bottom: var(--spacing-4);
+  }
+  
+  .next-button {
+    width: 100%;
+    padding: var(--spacing-4) var(--spacing-6);
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-address-form {
+    padding: var(--spacing-3);
+  }
+  
+  .form-title {
+    font-size: var(--font-size-lg);
+  }
+  
+  .form-row input[type='text'],
+  .form-row input[type='email'],
+  .form-row input[type='tel'] {
+    padding: var(--spacing-2);
+    font-size: var(--font-size-sm);
+  }
+}

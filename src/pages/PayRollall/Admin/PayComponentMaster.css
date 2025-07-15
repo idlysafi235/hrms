@@ -1,153 +1,152 @@
 .pcm-page {
-    max-width: 1100px;
-    background-color: var(--background);
-    font-family: var(--font-sans);
+  max-width: 1100px;
+  background-color: var(--background);
+  font-family: var(--font-sans);
+}
+
+.pcm-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: calc(var(--spacing) * 8);
+  color: var(--foreground);
+  padding-bottom: calc(var(--spacing) * 2);
+  font-family: var(--font-sans);
+}
+
+.pcm-form {
+  margin-bottom: calc(var(--spacing) * 8);
+}
+
+.pcm-form-row {
+  display: flex;
+  gap: calc(var(--spacing) * 8);
+  flex-wrap: wrap;
+}
+
+.pcm-form-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 220px;
+  flex: 1;
+}
+
+.pcm-form-group label {
+  font-weight: 500;
+  margin-bottom: calc(var(--spacing) * 1.2);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+.pcm-form-group input,
+.pcm-form-group select {
+  padding: calc(var(--spacing) * 2.4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  background-color: var(--input);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+.pcm-form-group.checkbox {
+  justify-content: flex-end;
+  margin-top: calc(var(--spacing) * 6.8);
+}
+
+.pcm-form-actions {
+  margin-top: calc(var(--spacing) * 4);
+}
+
+.btn {
+  padding: calc(var(--spacing) * 2.4) calc(var(--spacing) * 4.8);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-right: calc(var(--spacing) * 3.2);
+  font-family: var(--font-sans);
+}
+
+.btn.primary {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.btn.secondary {
+  background-color: var(--muted);
+  color: var(--muted-foreground);
+}
+
+.btn.primary:hover {
+  background-color: var(--ring);
+}
+
+.pcm-error {
+  color: var(--destructive);
+  margin-top: calc(var(--spacing) * 4);
+  font-family: var(--font-sans);
+  font-weight: 500;
+}
+
+.btn-action {
+  margin-right: calc(var(--spacing) * 1.5);
+  padding: calc(var(--spacing) * 1.25) calc(var(--spacing) * 3);
+  font-size: 0.85rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-family: var(--font-sans);
+}
+
+.btn-action.edit {
+  background-color: var(--chart-2);
+  color: var(--primary-foreground);
+}
+
+.btn-action.delete {
+  background-color: var(--destructive);
+  color: var(--destructive-foreground);
+}
+
+@media (max-width: 768px) {
+  .pcm-page {
+    max-width: 100%;
+    padding: calc(var(--spacing) * 4);
   }
-  
-  .pcm-title {
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin-bottom: calc(var(--spacing) * 8);
-    color: var(--foreground);
-    padding-bottom: calc(var(--spacing) * 2);
-    font-family: var(--font-sans);
-  }
-  
-  .pcm-form {
-    margin-bottom: calc(var(--spacing) * 8);
-  }
-  
+
   .pcm-form-row {
-    display: flex;
-    gap: calc(var(--spacing) * 8);
-    flex-wrap: wrap;
-  }
-  
-  .pcm-form-group {
-    display: flex;
     flex-direction: column;
-    min-width: 220px;
-    flex: 1;
+    gap: calc(var(--spacing) * 4);
   }
-  
-  .pcm-form-group label {
-    font-weight: 500;
-    margin-bottom: calc(var(--spacing) * 1.2);
-    color: var(--foreground);
-    font-family: var(--font-sans);
+
+  .pcm-form-group {
+    min-width: 100%;
   }
-  
-  .pcm-form-group input,
-  .pcm-form-group select {
-    padding: calc(var(--spacing) * 2.4);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-sm);
-    font-size: 1rem;
-    background-color: var(--input);
-    color: var(--foreground);
-    font-family: var(--font-sans);
-  }
-  
+
   .pcm-form-group.checkbox {
-    justify-content: flex-end;
-    margin-top: calc(var(--spacing) * 6.8);
-  }
-  
-  .pcm-form-actions {
     margin-top: calc(var(--spacing) * 4);
   }
-  
+
   .btn {
-    padding: calc(var(--spacing) * 2.4) calc(var(--spacing) * 4.8);
-    border: none;
-    border-radius: var(--radius-sm);
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 0.95rem;
-    margin-right: calc(var(--spacing) * 3.2);
-    font-family: var(--font-sans);
+    margin-bottom: calc(var(--spacing) * 2);
+    width: 100%;
   }
-  
-  .btn.primary {
-    background-color: var(--primary);
-    color: var(--primary-foreground);
+}
+
+@media (max-width: 480px) {
+  .pcm-page {
+    padding: calc(var(--spacing) * 3);
   }
-  
-  .btn.secondary {
-    background-color: var(--muted);
-    color: var(--muted-foreground);
+
+  .pcm-title {
+    font-size: 1.5rem;
+    margin-bottom: calc(var(--spacing) * 6);
   }
-  
-  .btn.primary:hover {
-    background-color: var(--ring);
-  }
-  
-  .pcm-error {
-    color: var(--destructive);
-    margin-top: calc(var(--spacing) * 4);
-    font-family: var(--font-sans);
-    font-weight: 500;
-  }
- 
+
   .btn-action {
-    margin-right: calc(var(--spacing) * 1.5);
-    padding: calc(var(--spacing) * 1.25) calc(var(--spacing) * 3);
-    font-size: 0.85rem;
-    border: none;
-    border-radius: var(--radius-sm);
-    cursor: pointer;
-    font-family: var(--font-sans);
+    padding: calc(var(--spacing) * 1) calc(var(--spacing) * 2);
+    font-size: 0.75rem;
+    margin-right: calc(var(--spacing) * 1);
   }
-  
-  .btn-action.edit {
-    background-color: var(--chart-2);
-    color: var(--primary-foreground);
-  }
-  
-  .btn-action.delete {
-    background-color: var(--destructive);
-    color: var(--destructive-foreground);
-  }
-
-  @media (max-width: 768px) {
-    .pcm-page {
-      max-width: 100%;
-      padding: calc(var(--spacing) * 4);
-    }
-    
-    .pcm-form-row {
-      flex-direction: column;
-      gap: calc(var(--spacing) * 4);
-    }
-    
-    .pcm-form-group {
-      min-width: 100%;
-    }
-    
-    .pcm-form-group.checkbox {
-      margin-top: calc(var(--spacing) * 4);
-    }
-    
-    .btn {
-      margin-bottom: calc(var(--spacing) * 2);
-      width: 100%;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .pcm-page {
-      padding: calc(var(--spacing) * 3);
-    }
-    
-    .pcm-title {
-      font-size: 1.5rem;
-      margin-bottom: calc(var(--spacing) * 6);
-    }
-    
-    .btn-action {
-      padding: calc(var(--spacing) * 1) calc(var(--spacing) * 2);
-      font-size: 0.75rem;
-      margin-right: calc(var(--spacing) * 1);
-    }
-  }
-  
+}

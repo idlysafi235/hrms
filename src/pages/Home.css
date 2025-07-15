@@ -1,10 +1,10 @@
-
 /* Home page styles using :root variables */
-.home-container {
+.home_wrapper {
   padding: var(--spacing-6);
   background: var(--background);
   color: var(--foreground);
   min-height: 100vh;
+  overflow-y: scroll;
 }
 
 .welcome-section {
@@ -64,16 +64,16 @@
   .home-container {
     padding: var(--spacing-4);
   }
-  
+
   .welcome-title {
     font-size: var(--font-size-2xl);
   }
-  
+
   .stats-grid {
     grid-template-columns: 1fr;
     gap: var(--spacing-4);
   }
-  
+
   .stat-card {
     padding: var(--spacing-4);
   }
@@ -83,7 +83,7 @@
   .welcome-title {
     font-size: var(--font-size-xl);
   }
-  
+
   .welcome-subtitle {
     font-size: var(--font-size-base);
   }

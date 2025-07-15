@@ -1,14 +1,27 @@
 .avl-leaves_content-wrapper > h2 {
-    font-size:1.3em;
+    font-size: 1.3em;
     font-weight: 700;
     text-align: center;
+    color: var(--foreground);
+}
+
+@media (max-width: 768px) {
+    .avl-leaves_content-wrapper > h2 {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .avl-leaves_content-wrapper > h2 {
+        font-size: 1em;
+    }
 }
 
 .avl-leaves_content-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap:10px;
+    gap: calc(var(--spacing) * 2.5);
     height: 100%;
 }
 
@@ -16,36 +29,80 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 10px;
+    gap: calc(var(--spacing) * 2.5);
+}
+
+@media (max-width: 480px) {
+    .avl-leaves_content {
+        flex-direction: column;
+        gap: calc(var(--spacing) * 2);
+    }
 }
 
 .avl-leaves_earned, .avl-leaves_sick {
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-
-    border: 1px solid #eee;
+    border: 1px solid var(--border);
     transition: all 0.3s ease;
-    border-radius: 20px;
-    padding: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    width:50%;
+    border-radius: calc(var(--radius) * 2);
+    padding: calc(var(--spacing) * 2.5);
+    box-shadow: var(--shadow-sm);
+    width: 50%;
+}
+
+@media (max-width: 768px) {
+    .avl-leaves_earned, .avl-leaves_sick {
+        padding: calc(var(--spacing) * 2);
+        border-radius: var(--radius);
+    }
+}
+
+@media (max-width: 480px) {
+    .avl-leaves_earned, .avl-leaves_sick {
+        width: 100%;
+        padding: calc(var(--spacing) * 3);
+    }
 }
 
 .avl-leaves_earned {
-    background: #d8f3dc;
+    background: var(--secondary);
+    opacity: 0.2;
+    color: var(--secondary-foreground);
 }
 
 .avl-leaves_sick {
-    background: #ffa5ab;
+    background: var(--destructive);
+    opacity: 0.3;
+    color: var(--destructive-foreground);
 }
 
 .avl-leaves_earned h5, .avl-leaves_sick h5 {
     font-size: 3.5em;
     margin: 0;
+    color: var(--foreground);
+}
+
+@media (max-width: 768px) {
+    .avl-leaves_earned h5, .avl-leaves_sick h5 {
+        font-size: 3em;
+    }
+}
+
+@media (max-width: 480px) {
+    .avl-leaves_earned h5, .avl-leaves_sick h5 {
+        font-size: 2.5em;
+    }
 }
 
 .avl-leaves_days {
     font-size: 13px;
+    color: var(--muted-foreground);
+}
+
+@media (max-width: 768px) {
+    .avl-leaves_days {
+        font-size: 12px;
+    }
 }

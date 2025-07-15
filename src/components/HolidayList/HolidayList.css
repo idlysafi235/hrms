@@ -3,46 +3,113 @@
   flex-direction: column;
   width: 100%;
   height: 100%;
+  background: var(--card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
 }
 
 .rsh {
   font-size: 1rem;
   font-weight: 600;
   text-align: center;
-  padding-bottom: 6px;
-  margin-bottom: 8px;
-  border-bottom: 1px solid #ddd;
+  padding-bottom: calc(var(--spacing) * 1.5);
+  margin-bottom: calc(var(--spacing) * 2);
+  border-bottom: 1px solid var(--border);
+  color: var(--foreground);
+}
+
+@media (max-width: 768px) {
+  .rsh {
+    font-size: 0.9rem;
+    padding-bottom: calc(var(--spacing) * 1);
+    margin-bottom: calc(var(--spacing) * 1.5);
+  }
+}
+
+@media (max-width: 480px) {
+  .rsh {
+    font-size: 0.85rem;
+  }
 }
 
 .table-container {
   flex: 1;
   overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--muted-foreground) var(--muted);
+}
+
+.table-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background-color: var(--muted-foreground);
+  border-radius: var(--radius);
+}
+
+.table-container::-webkit-scrollbar-track {
+  background-color: var(--muted);
 }
 
 .scrollable-table {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.95rem;
+  color: var(--foreground);
+}
+
+@media (max-width: 768px) {
+  .scrollable-table {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .scrollable-table {
+    font-size: 0.85rem;
+  }
 }
 
 .scrollable-table th,
 .scrollable-table td {
-  padding: 8px 10px;
-  border-bottom: 1px solid #eee;
+  padding: calc(var(--spacing) * 2) calc(var(--spacing) * 2.5);
+  border-bottom: 1px solid var(--border);
   text-align: left;
 }
 
+@media (max-width: 768px) {
+  .scrollable-table th,
+  .scrollable-table td {
+    padding: calc(var(--spacing) * 1.5) calc(var(--spacing) * 2);
+  }
+}
+
+@media (max-width: 480px) {
+  .scrollable-table th,
+  .scrollable-table td {
+    padding: calc(var(--spacing) * 1) calc(var(--spacing) * 1.5);
+  }
+}
+
 .scrollable-table thead th {
-  background-color: #e0e0e0;
+  background-color: var(--muted);
+  color: var(--muted-foreground);
   position: sticky;
   top: 0;
   z-index: 1;
+  font-weight: 600;
 }
 
 .scrollable-table tbody tr:nth-child(odd) {
-  background-color: #f2f2f2;
+  background-color: var(--card);
 }
 
 .scrollable-table tbody tr:nth-child(even) {
-  background-color: #fafafa;
+  background-color: var(--muted);
+}
+
+.scrollable-table tbody tr:hover {
+  background-color: var(--accent);
+  transition: background-color 0.2s ease;
 }

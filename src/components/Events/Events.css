@@ -3,39 +3,80 @@
   flex-direction: column;
   align-items: stretch; 
   width: 100%;
-  padding: 10px;
-  background: #fff; 
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: calc(var(--spacing) * 2.5);
+  background: var(--card); 
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+}
+
+@media (max-width: 768px) {
+  .events-birthdays-container {
+    padding: calc(var(--spacing) * 2);
+  }
+}
+
+@media (max-width: 480px) {
+  .events-birthdays-container {
+    padding: calc(var(--spacing) * 1.5);
+  }
 }
 
 /* Navbar */
 .evelayouts-navbar {
   display: flex;
-  gap: 10px;
-  padding: 0px;
-  margin-bottom: 10px;
-  border-bottom: 1px solid #ddd;
+  gap: calc(var(--spacing) * 2.5);
+  padding: 0;
+  margin-bottom: calc(var(--spacing) * 2.5);
+  border-bottom: 1px solid var(--border);
+}
+
+@media (max-width: 768px) {
+  .evelayouts-navbar {
+    gap: calc(var(--spacing) * 2);
+    margin-bottom: calc(var(--spacing) * 2);
+  }
+}
+
+@media (max-width: 480px) {
+  .evelayouts-navbar {
+    gap: calc(var(--spacing) * 1.5);
+    flex-wrap: wrap;
+  }
 }
 
 .evelayouts-tab {
   transition: border-bottom 0.2s ease, color 0.2s ease;
-  padding: 10px 15px;
+  padding: calc(var(--spacing) * 2.5) calc(var(--spacing) * 3.8);
   font-size: 14px;
-  color: #21093d93;
+  color: var(--muted-foreground);
   background: none;
   border: none;
   cursor: pointer;
 }
 
+@media (max-width: 768px) {
+  .evelayouts-tab {
+    padding: calc(var(--spacing) * 2) calc(var(--spacing) * 3);
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .evelayouts-tab {
+    padding: calc(var(--spacing) * 1.5) calc(var(--spacing) * 2);
+    font-size: 12px;
+  }
+}
+
 .evelayouts-tab:hover {
-  color: #21093d;
-  border-bottom: 2px solid #21093d;
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
 }
 
 .evelayouts-tab.active {
-  color: #21093d;
-  border-bottom: 2px solid #21093d;
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
   font-weight: 500;
 }
 
@@ -43,9 +84,9 @@
 .events-section,
 .birthdays-section {
   width: 100%;
-  padding: 0px; 
+  padding: 0; 
   border-radius: 0;
-  margin-top: 10px;
+  margin-top: calc(var(--spacing) * 2.5);
   background: none;
   box-shadow: none; 
 }
@@ -53,8 +94,16 @@
 .events-section h3,
 .birthdays-section h3 {
   font-size: 18px;
-  color: #333;
-  margin-bottom: 10px;
+  color: var(--foreground);
+  margin-bottom: calc(var(--spacing) * 2.5);
+}
+
+@media (max-width: 768px) {
+  .events-section h3,
+  .birthdays-section h3 {
+    font-size: 16px;
+    margin-bottom: calc(var(--spacing) * 2);
+  }
 }
 
 .events-section ul,
@@ -66,36 +115,61 @@
 
 .events-section li,
 .birthday-item {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
+  padding: calc(var(--spacing) * 2.5);
+  border-bottom: 1px solid var(--border);
   display: flex;
   align-items: center;
+  transition: background-color 0.2s ease;
+}
+
+.events-section li:hover,
+.birthday-item:hover {
+  background-color: var(--muted);
+}
+
+@media (max-width: 768px) {
+  .events-section li,
+  .birthday-item {
+    padding: calc(var(--spacing) * 2);
+  }
 }
 
 .event-icon,
 .birthday-icon {
   font-size: 20px;
-  margin-right: 10px;
+  margin-right: calc(var(--spacing) * 2.5);
+  color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .event-icon,
+  .birthday-icon {
+    font-size: 18px;
+    margin-right: calc(var(--spacing) * 2);
+  }
 }
 
 .birthday-icon {
-  color: #ff9800;
+  color: var(--secondary);
 }
 
 .more-item {
   font-weight: bold;
   cursor: pointer;
   position: relative;
+  color: var(--foreground);
 }
 
 .tooltipbox {
   display: none;
   position: absolute;
-  background: white;
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background: var(--popover);
+  color: var(--popover-foreground);
+  padding: calc(var(--spacing) * 2.5);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
   z-index: 10;
+  border: 1px solid var(--border);
 }
 
 .more-item:hover .tooltipbox {
@@ -103,8 +177,14 @@
 }
 
 .event-item {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
+  padding: calc(var(--spacing) * 2.5);
+  border-bottom: 1px solid var(--border);
+}
+
+@media (max-width: 768px) {
+  .event-item {
+    padding: calc(var(--spacing) * 2);
+  }
 }
 
 .event-icon-title {
@@ -120,10 +200,22 @@
 .event-title {
   font-weight: 500;
   font-size: 15px;
-  color: #333;
+  color: var(--foreground);
+}
+
+@media (max-width: 768px) {
+  .event-title {
+    font-size: 14px;
+  }
 }
 
 .event-date-time {
   font-size: 13px;
-  color: #888;
+  color: var(--muted-foreground);
+}
+
+@media (max-width: 768px) {
+  .event-date-time {
+    font-size: 12px;
+  }
 }
